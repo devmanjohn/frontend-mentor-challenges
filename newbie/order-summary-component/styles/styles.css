@@ -147,4 +147,14 @@ a {
 button,
 input {
   all: unset;
+}
+
+:root {
+  --font-red-hat-display: "Red Hat Display", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  font-family: var(--font-red-hat-display);
 }/*# sourceMappingURL=styles.css.map */

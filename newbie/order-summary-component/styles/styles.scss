@@ -1,1 +1,11 @@
 @use './core/reset';
+
+:root {
+  --font-red-hat-display: 'Red Hat Display', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  font-family: var(--font-red-hat-display);
+}
