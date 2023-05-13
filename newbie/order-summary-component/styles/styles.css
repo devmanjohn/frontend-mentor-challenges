@@ -164,10 +164,18 @@ img {
 }
 
 body {
-  background-color: #d6e1ff;
+  background-image: url("/assets/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #e0e8ff;
   display: grid;
   place-items: center;
   min-height: 100vh;
+}
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("/assets/images/pattern-background-desktop.svg");
+  }
 }
 
 .card {
@@ -186,7 +194,7 @@ body {
 
 .card-contents {
   text-align: center;
-  padding-inline: 1.5rem;
+  padding-inline: clamp(1.5rem, 5vw, 2rem);
   padding-bottom: 1.5rem;
 }
 .card-contents .title {
@@ -201,4 +209,47 @@ body {
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
+}
+
+.pricing-plan {
+  background-color: #f7f9ff;
+  padding: 1rem;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 14px;
+  margin-top: 24px;
+}
+.pricing-plan .pricing-details h3 {
+  font-weight: 600;
+  color: #1f2e55;
+}
+.pricing-plan .pricing-details p {
+  color: #717fa6;
+  margin-top: 5px;
+}
+.pricing-plan .change-btn {
+  color: #382ae1;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: auto;
+}
+
+.btns-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 24px;
+}
+.btns-container button {
+  font-weight: 600;
+  padding: 20px;
+  color: #717fa6;
+  border-radius: 11px;
+}
+.btns-container .blue-btn {
+  background-color: #382ae1;
+  color: #ffffff;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
 }/*# sourceMappingURL=styles.css.map */
