@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor Challenge | BMI Calculator</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <!-- scripts -->
+    <script src="./scripts/index.js" defer></script>
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha384-xjP10QrW7PA6WOlPOkWwDcyKJeREvuwWVAc5aS9/ObhcWcdopa9q3l7NXObVJQ8r"
+      crossorigin="anonymous"
+    ></script>
+    <!-- scroll trigger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+      integrity="sha384-V0oE5KjuA5fwJoB7Ve6EjvvRB2skf+fPQ1IncPdJ4HurEaHbSKYUoW3Y13UzFcpD"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="page-header">
+      <img src="./assets/images/logo.svg" alt="bmi-calculator-logo" />
+    </header>
+    <main>
+      <section class="landing-hero">
+        <h1 class="heading">Testing</h1>
+        <p>
+          Better understand your weight in relation to your height using our
+          body mass index (BM) calculator. While BMI is not the sole determinant
+          of a healthy weight, it offers a valuable starting point to evaluate
+          your overall health and well-being.
+        </p>
+
+        <div class="details-card">
+          <p class="details-title">Enter your details below</p>
+
+          <!-- bmi form controls -->
+          <form>
+            <!-- radio field 1 -->
+            <!-- radio field 2 -->
+
+            <!-- conditional rendering on input fields -->
+          </form>
+
+          <!-- bmi results card -->
+          <div id="bmi-results" class="bmi-results">
+            <p>Your BMI is...</p>
+            <span id="bmi-result">23.4</span>
+            <p class="bmi-details">
+              Your BMI suggests you're a healthy weight. Your ideal weight is
+              between <em>63.3kgs - 85.2kgs.</em>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
