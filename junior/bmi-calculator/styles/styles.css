@@ -228,6 +228,7 @@ header img {
   gap: 2rem;
 }
 
+/*===CUSTOM RADIO BUTTONS===*/
 .custom-radio-btn {
   display: flex;
   align-items: center;
