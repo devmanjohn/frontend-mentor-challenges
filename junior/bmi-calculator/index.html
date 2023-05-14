@@ -31,8 +31,8 @@
     </header>
     <main>
       <section class="landing-hero">
-        <h1 class="heading">Testing</h1>
-        <p>
+        <h1 class="heading">Body Mass Index Calculator</h1>
+        <p class="hero-snippet">
           Better understand your weight in relation to your height using our
           body mass index (BM) calculator. While BMI is not the sole determinant
           of a healthy weight, it offers a valuable starting point to evaluate
@@ -40,15 +40,35 @@
         </p>
 
         <div class="details-card">
-          <p class="details-title">Enter your details below</p>
+          <p class="details-heading">Enter your details below</p>
 
           <!-- bmi form controls -->
-          <form>
-            <!-- radio field 1 -->
-            <!-- radio field 2 -->
+          <div class="bmi-form">
+            <!-- metric radio -->
+            <label class="custom-radio-btn" for="metric">
+              <input
+                type="radio"
+                name="measurements"
+                id="metric"
+                value="metric"
+              />
+              <span class="radio-icon"></span>
+              <p>Metric</p>
+            </label>
+            <!-- imperial radio -->
+            <label class="custom-radio-btn" for="imperial">
+              <input
+                type="radio"
+                name="measurements"
+                id="imperial"
+                value="imperial"
+              />
+              <span class="radio-icon"></span>
+              <p>Imperial</p>
+            </label>
 
             <!-- conditional rendering on input fields -->
-          </form>
+          </div>
 
           <!-- bmi results card -->
           <div id="bmi-results" class="bmi-results">
