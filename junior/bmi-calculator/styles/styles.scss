@@ -43,7 +43,18 @@ header {
   }
 }
 
-/*===HERO SECTION & FORM CONTROL===*/
+/*===RESUSED CLASSES===*/
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+/*===HERO SECTION===*/
 .landing-hero {
   text-align: center;
 
@@ -71,6 +82,7 @@ header {
   }
 }
 
+/*===BMI DETAILS CARD===*/
 .details-card {
   width: calc(100% - 2rem);
   margin-inline: auto;
@@ -98,18 +110,19 @@ header {
 
 .input-container {
   margin-top: 1.75rem;
+
+  .input-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #5e6e85;
+    margin-top: 1rem;
+  }
 }
 
 .custom-input {
   position: relative;
   display: block;
   margin-top: 1rem;
-
-  .label {
-    display: block;
-    margin-bottom: 0.75rem;
-    color: #5e6e85;
-  }
 
   input[type='number'] {
     width: 100%;
@@ -128,6 +141,8 @@ header {
     right: 24px;
     top: 50%;
 
+    transform: translateY(-50%);
+
     color: var(--clr-blue);
     font-weight: 600;
     font-size: 24px;
@@ -138,7 +153,6 @@ header {
   }
 }
 
-/*===CUSTOM RADIO BUTTONS===*/
 .custom-radio-btn {
   display: flex;
   align-items: center;
@@ -182,7 +196,6 @@ header {
   }
 }
 
-/*===RESULT CARD STYLING===*/
 .bmi-results {
   background-color: var(--clr-blue);
 
@@ -214,6 +227,7 @@ header {
   }
 }
 
+/*===MAN EATING SECTION===*/
 .man-eating {
   display: block;
   margin-top: 4rem;

@@ -71,17 +71,75 @@
         </div>
 
         <!-- conditional rendering on input fields -->
+        <!-- <div class="input-container">
+          <div id="metric-inputs">
+            <label
+              class="custom-input"
+              for="height"
+              onclick="changeMeasurements('imperial')"
+            >
+              <span class="label">Height</span>
+              <input type="number" name="height" id="height" />
+              <span class="measurement">cm</span>
+            </label>
+            <label
+              class="custom-input"
+              for="weight"
+              onclick="changeMeasurements('imperial')"
+            >
+              <span class="label">Weight</span>
+              <input type="number" name="weight" id="weight" />
+              <span class="measurement">kg</span>
+            </label>
+          </div>
+
+          <div id="imperial-inputs">
+            <div class="row">
+              <label class="custom-input" for="height">
+                <span class="label">Height</span>
+                <input type="number" name="height" id="height" />
+                <span class="measurement">ft</span>
+              </label>
+              <label class="custom-input" for="height">
+                <input type="number" name="height" id="height" />
+                <span class="measurement">in</span>
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="custom-input" for="weight">
+                <span class="label">Weight</span>
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">st</span>
+              </label>
+              <label class="custom-input" for="weight">
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">lbs</span>
+              </label>
+            </div>
+          </div>
+        </div> -->
+
         <div class="input-container">
-          <label class="custom-input" for="height">
-            <span class="label">Height</span>
-            <input type="number" name="height" id="height" />
-            <span class="measurement">cm</span>
-          </label>
-          <label class="custom-input" for="weight">
-            <span class="label">Weight</span>
-            <input type="number" name="weight" id="weight" />
-            <span class="measurement">kg</span>
-          </label>
+          <!-- metric -->
+          <div id="metric">
+            <div class="metric-row">
+              <p class="input-label">Height</p>
+              <label class="custom-input" for="weight">
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">st</span>
+              </label>
+
+              <p class="input-label">Weight</p>
+              <label class="custom-input" for="weight">
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">st</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- imperial -->
+          <div id="imperial"></div>
         </div>
 
         <!-- bmi results card -->
