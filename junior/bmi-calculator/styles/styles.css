@@ -182,7 +182,7 @@ body {
 header {
   display: flex;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   margin-top: 2rem;
 }
@@ -195,6 +195,7 @@ header img {
   text-align: center;
   padding-top: 96px;
   padding-inline: 24px;
+  padding-bottom: 12rem;
   background: linear-gradient(290.1deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%);
   border-radius: 0px 0px 35px 35px;
 }
@@ -210,16 +211,18 @@ header img {
 }
 
 .details-card {
-  margin-top: 48px;
+  width: calc(100% - 2rem);
+  margin-inline: auto;
   background-color: var(--clr-white);
   box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
   border-radius: 16px;
   text-align: left;
-  padding: 1rem;
+  padding: 1.5rem;
+  margin-top: -9rem;
 }
 .details-card .details-heading {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 1.35rem;
   color: var(--clr-gunmetal);
 }
 
@@ -228,12 +231,47 @@ header img {
   gap: 2rem;
 }
 
+.input-container {
+  margin-top: 1.75rem;
+}
+
+.custom-input {
+  position: relative;
+  display: block;
+  margin-top: 1rem;
+}
+.custom-input .label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #5e6e85;
+}
+.custom-input input[type=number] {
+  width: 100%;
+  padding: 20px 24px;
+  color: var(--clr-gunmetal);
+  font-weight: 600;
+  font-size: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--clr-borders);
+}
+.custom-input .measurement {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  color: var(--clr-blue);
+  font-weight: 600;
+  font-size: 24px;
+}
+.custom-input:focus {
+  outline: none;
+}
+
 /*===CUSTOM RADIO BUTTONS===*/
 .custom-radio-btn {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.75rem;
 }
 .custom-radio-btn .radio-icon {
   width: 31px;
@@ -261,6 +299,32 @@ header img {
   background-color: var(--clr-blue);
 }
 
+/*===RESULT CARD STYLING===*/
 .bmi-results {
-  margin-top: 1rem;
+  background-color: var(--clr-blue);
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  color: var(--clr-white);
+  border-radius: 16px;
+}
+.bmi-results .bmi-heading {
+  font-weight: 600;
+}
+.bmi-results #bmi-result {
+  display: block;
+  margin-top: 8px;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.bmi-results .bmi-details {
+  margin-top: 1.5rem;
+  line-height: 150%;
+}
+.bmi-results .bmi-details em {
+  font-weight: 600;
+}
+
+.man-eating {
+  display: block;
+  margin-top: 4rem;
 }/*# sourceMappingURL=styles.css.map */
