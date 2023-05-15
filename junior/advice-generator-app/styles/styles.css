@@ -1,0 +1,217 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+}
+
+img {
+  max-width: 100%;
+}
+
+:root {
+  --clr-neon-green: #53ffaa;
+  --clr-light-cyan: #cee3e9;
+  --clr-dark-blue: #202733;
+  --clr-dark-grayish-blue: #313a48;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--clr-dark-blue);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  color: var(--clr-light-cyan);
+}
+
+.advice-card {
+  position: relative;
+  text-align: center;
+  background-color: var(--clr-dark-grayish-blue);
+  padding: 40px 24px clamp(70px, 5vw, 80px) 24px;
+  width: calc(100% - 2rem);
+  max-width: 540px;
+  margin-inline: auto;
+  border-radius: 10px;
+}
+.advice-card .advice-value {
+  text-transform: uppercase;
+  color: var(--clr-neon-green);
+  font-size: 0.75rem;
+  letter-spacing: 3.4px;
+}
+.advice-card .divider {
+  width: 100%;
+  margin-top: clamp(24px, 5vw, 40px);
+}
+.advice-card #advice {
+  line-height: 150%;
+  font-size: clamp(1.5rem, 5vw, 1.75rem);
+  margin-top: 24px;
+}
+.advice-card #generate-advice {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -25px;
+  padding: 1.25rem;
+  background-color: var(--clr-neon-green);
+  border-radius: 100%;
+  cursor: pointer;
+  transition: box-shadow 500ms ease;
+}
+@media screen and (min-width: 1024px) {
+  .advice-card #generate-advice:hover {
+    box-shadow: 0px 0px 40px #53ffaa;
+  }
+}
+
+.rotate-dice img {
+  transition: transform 600ms ease-in-out;
+  transform: rotate(360deg);
+}/*# sourceMappingURL=styles.css.map */
