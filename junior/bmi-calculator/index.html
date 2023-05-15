@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor Challenge | BMI Calculator</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <!-- scripts -->
+    <script src="./scripts/index.js" defer></script>
+
+    <!-- gsap -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
+      integrity="sha384-xjP10QrW7PA6WOlPOkWwDcyKJeREvuwWVAc5aS9/ObhcWcdopa9q3l7NXObVJQ8r"
+      crossorigin="anonymous"
+    ></script>
+    <!-- scroll trigger -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
+      integrity="sha384-V0oE5KjuA5fwJoB7Ve6EjvvRB2skf+fPQ1IncPdJ4HurEaHbSKYUoW3Y13UzFcpD"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header id="page-header">
+      <img src="./assets/images/logo.svg" alt="bmi-calculator-logo" />
+    </header>
+    <main>
+      <section class="landing-hero">
+        <h1 class="heading">Body Mass Index Calculator</h1>
+        <p class="hero-snippet">
+          Better understand your weight in relation to your height using our
+          body mass index (BM) calculator. While BMI is not the sole determinant
+          of a healthy weight, it offers a valuable starting point to evaluate
+          your overall health and well-being.
+        </p>
+      </section>
+
+      <section class="details-card">
+        <p class="details-heading">Enter your details below</p>
+
+        <!-- bmi form controls -->
+        <div class="bmi-form">
+          <!-- metric radio -->
+          <label class="custom-radio-btn" for="metric">
+            <input
+              type="radio"
+              name="measurements"
+              id="metric"
+              value="metric"
+              checked
+            />
+            <span class="radio-icon"></span>
+            <p>Metric</p>
+          </label>
+          <!-- imperial radio -->
+          <label class="custom-radio-btn" for="imperial">
+            <input
+              type="radio"
+              name="measurements"
+              id="imperial"
+              value="imperial"
+            />
+            <span class="radio-icon"></span>
+            <p>Imperial</p>
+          </label>
+        </div>
+
+        <!-- conditional rendering on input fields -->
+        <!-- <div class="input-container">
+          <div id="metric-inputs">
+            <label
+              class="custom-input"
+              for="height"
+              onclick="changeMeasurements('imperial')"
+            >
+              <span class="label">Height</span>
+              <input type="number" name="height" id="height" />
+              <span class="measurement">cm</span>
+            </label>
+            <label
+              class="custom-input"
+              for="weight"
+              onclick="changeMeasurements('imperial')"
+            >
+              <span class="label">Weight</span>
+              <input type="number" name="weight" id="weight" />
+              <span class="measurement">kg</span>
+            </label>
+          </div>
+
+          <div id="imperial-inputs">
+            <div class="row">
+              <label class="custom-input" for="height">
+                <span class="label">Height</span>
+                <input type="number" name="height" id="height" />
+                <span class="measurement">ft</span>
+              </label>
+              <label class="custom-input" for="height">
+                <input type="number" name="height" id="height" />
+                <span class="measurement">in</span>
+              </label>
+            </div>
+
+            <div class="row">
+              <label class="custom-input" for="weight">
+                <span class="label">Weight</span>
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">st</span>
+              </label>
+              <label class="custom-input" for="weight">
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">lbs</span>
+              </label>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="input-container">
+          <!-- metric -->
+          <div id="metric">
+            <div class="metric-row">
+              <p class="input-label">Height</p>
+              <label class="custom-input" for="weight">
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">st</span>
+              </label>
+
+              <p class="input-label">Weight</p>
+              <label class="custom-input" for="weight">
+                <input type="number" name="weight" id="weight" />
+                <span class="measurement">st</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- imperial -->
+          <div id="imperial"></div>
+        </div>
+
+        <!-- bmi results card -->
+        <div id="bmi-results" class="bmi-results">
+          <p class="bmi-heading">Your BMI is...</p>
+          <span id="bmi-result">23.4</span>
+          <p class="bmi-details">
+            Your BMI suggests you're a healthy weight. Your ideal weight is
+            between <em>63.3kgs - 85.2kgs.</em>
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <img
+          class="man-eating"
+          src="./assets/images/image-man-eating.webp"
+          alt=""
+        />
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

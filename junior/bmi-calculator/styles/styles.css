@@ -1,0 +1,343 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  all: unset;
+}
+
+img {
+  max-width: 100%;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+:root {
+  --clr-gunmetal: #253347;
+  --clr-dark-electric-blue: #5e6e85;
+  --clr-borders: #d8e2e7;
+  --clr-white: #ffffff;
+  --clr-blue: #345ff6;
+  --font-inter: "Inter", "sans-serif";
+}
+
+body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  margin-top: 2rem;
+}
+header img {
+  width: 40px;
+}
+
+/*===RESUSED CLASSES===*/
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+/*===HERO SECTION===*/
+.landing-hero {
+  text-align: center;
+  padding-top: 96px;
+  padding-inline: 24px;
+  padding-bottom: 12rem;
+  background: linear-gradient(290.1deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%);
+  border-radius: 0px 0px 35px 35px;
+}
+.landing-hero .heading {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--clr-gunmetal);
+}
+.landing-hero .hero-snippet {
+  margin-top: 1rem;
+  color: var(--clr-dark-electric-blue);
+  line-height: 150%;
+}
+
+/*===BMI DETAILS CARD===*/
+.details-card {
+  width: calc(100% - 2rem);
+  margin-inline: auto;
+  background-color: var(--clr-white);
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+  border-radius: 16px;
+  text-align: left;
+  padding: 1.5rem;
+  margin-top: -9rem;
+}
+.details-card .details-heading {
+  font-weight: 600;
+  font-size: 1.35rem;
+  color: var(--clr-gunmetal);
+}
+
+.bmi-form {
+  display: flex;
+  gap: 2rem;
+}
+
+.input-container {
+  margin-top: 1.75rem;
+}
+.input-container .input-label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: #5e6e85;
+  margin-top: 1rem;
+}
+
+.custom-input {
+  position: relative;
+  display: block;
+  margin-top: 1rem;
+}
+.custom-input input[type=number] {
+  width: 100%;
+  padding: 20px 24px;
+  color: var(--clr-gunmetal);
+  font-weight: 600;
+  font-size: 24px;
+  border-radius: 12px;
+  border: 1px solid var(--clr-borders);
+}
+.custom-input .measurement {
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--clr-blue);
+  font-weight: 600;
+  font-size: 24px;
+}
+.custom-input:focus {
+  outline: none;
+}
+
+.custom-radio-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.custom-radio-btn .radio-icon {
+  width: 31px;
+  height: 31px;
+  border-radius: 100%;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--clr-borders);
+}
+.custom-radio-btn p {
+  font-weight: 600;
+}
+.custom-radio-btn input[type=radio] {
+  display: none;
+}
+.custom-radio-btn input[type=radio]:checked ~ .radio-icon {
+  background-color: rgba(52, 95, 246, 0.15);
+}
+.custom-radio-btn input[type=radio]:checked ~ .radio-icon::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: var(--clr-blue);
+}
+
+.bmi-results {
+  background-color: var(--clr-blue);
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  color: var(--clr-white);
+  border-radius: 16px;
+}
+.bmi-results .bmi-heading {
+  font-weight: 600;
+}
+.bmi-results #bmi-result {
+  display: block;
+  margin-top: 8px;
+  font-size: 3rem;
+  font-weight: 600;
+}
+.bmi-results .bmi-details {
+  margin-top: 1.5rem;
+  line-height: 150%;
+}
+.bmi-results .bmi-details em {
+  font-weight: 600;
+}
+
+/*===MAN EATING SECTION===*/
+.man-eating {
+  display: block;
+  margin-top: 4rem;
+}/*# sourceMappingURL=styles.css.map */

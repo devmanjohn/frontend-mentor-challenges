@@ -1,0 +1,234 @@
+@use './core/reset';
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --clr-gunmetal: #253347;
+  --clr-dark-electric-blue: #5e6e85;
+  --clr-borders: #d8e2e7;
+  --clr-white: #ffffff;
+  --clr-blue: #345ff6;
+
+  --font-inter: 'Inter', 'sans-serif';
+}
+
+body {
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  width: 100%;
+
+  margin-top: 2rem;
+  img {
+    width: 40px;
+  }
+}
+
+/*===RESUSED CLASSES===*/
+.hidden {
+  display: none;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-end;
+}
+
+/*===HERO SECTION===*/
+.landing-hero {
+  text-align: center;
+
+  padding-top: 96px;
+  padding-inline: 24px;
+  padding-bottom: 12rem;
+
+  background: linear-gradient(
+    290.1deg,
+    #d6e6fe 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+  border-radius: 0px 0px 35px 35px;
+
+  .heading {
+    font-size: 48px;
+    font-weight: 600;
+    color: var(--clr-gunmetal);
+  }
+
+  .hero-snippet {
+    margin-top: 1rem;
+    color: var(--clr-dark-electric-blue);
+    line-height: 150%;
+  }
+}
+
+/*===BMI DETAILS CARD===*/
+.details-card {
+  width: calc(100% - 2rem);
+  margin-inline: auto;
+  background-color: var(--clr-white);
+
+  box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+  border-radius: 16px;
+
+  text-align: left;
+  padding: 1.5rem;
+
+  margin-top: -9rem;
+
+  .details-heading {
+    font-weight: 600;
+    font-size: 1.35rem;
+    color: var(--clr-gunmetal);
+  }
+}
+
+.bmi-form {
+  display: flex;
+  gap: 2rem;
+}
+
+.input-container {
+  margin-top: 1.75rem;
+
+  .input-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #5e6e85;
+    margin-top: 1rem;
+  }
+}
+
+.custom-input {
+  position: relative;
+  display: block;
+  margin-top: 1rem;
+
+  input[type='number'] {
+    width: 100%;
+    padding: 20px 24px;
+
+    color: var(--clr-gunmetal);
+    font-weight: 600;
+    font-size: 24px;
+
+    border-radius: 12px;
+    border: 1px solid var(--clr-borders);
+  }
+
+  .measurement {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--clr-blue);
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.custom-radio-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: 1.75rem;
+
+  .radio-icon {
+    width: 31px;
+    height: 31px;
+
+    border-radius: 100%;
+
+    display: grid;
+    place-items: center;
+
+    border: 1px solid var(--clr-borders);
+  }
+
+  p {
+    font-weight: 600;
+  }
+
+  input[type='radio'] {
+    display: none;
+  }
+
+  input[type='radio']:checked ~ .radio-icon {
+    background-color: rgba(52, 95, 246, 0.15);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 15px;
+      height: 15px;
+
+      border-radius: 100%;
+
+      background-color: var(--clr-blue);
+    }
+  }
+}
+
+.bmi-results {
+  background-color: var(--clr-blue);
+
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+
+  color: var(--clr-white);
+  border-radius: 16px;
+
+  .bmi-heading {
+    font-weight: 600;
+  }
+
+  #bmi-result {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 3rem;
+    font-weight: 600;
+  }
+
+  .bmi-details {
+    margin-top: 1.5rem;
+    line-height: 150%;
+    em {
+      font-weight: 600;
+    }
+  }
+}
+
+/*===MAN EATING SECTION===*/
+.man-eating {
+  display: block;
+  margin-top: 4rem;
+}
