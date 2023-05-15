@@ -12,10 +12,40 @@
 
     <!-- scripts -->
     <script src="./scripts/index.js" defer></script>
+
+    <!-- typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+    <main>
+      <div class="advice-card">
+        <!-- advice -->
+        <p>Advice <span id="index-value">#117</span></p>
+        <p id="advice">
+          “It is easy to sit up and take notice, what's difficult is getting up
+          and taking action.”
+        </p>
+
+        <!-- divider -->
+        <img
+          src="./assets/images/pattern-divider-desktop.svg"
+          srcset="
+            ./assets/images/pattern-divider-desktop.svg 1200w,
+            ./assets/images/pattern-divider-mobile.svg   600w
+          "
+          alt=""
+        />
+
+        <!-- generate new advice -->
+        <button role="button" id="generate-advice">
+          <img src="./assets/images/icon-dice.svg" alt="" />
+        </button>
+      </div>
+    </main>
   </body>
 </html>
