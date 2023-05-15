@@ -1,9 +1,10 @@
 @use './core/reset';
 
 :root {
-  --clr-neon-green: ##53ffaa;
+  --clr-neon-green: #53ffaa;
   --clr-light-cyan: #cee3e9;
   --clr-dark-blue: #202733;
+  --clr-dark-grayish-blue: #313a48;
 }
 
 body {
@@ -12,4 +13,70 @@ body {
 
   display: grid;
   place-items: center;
+  min-height: 100vh;
+
+  color: var(--clr-light-cyan);
+}
+
+.advice-card {
+  position: relative;
+
+  text-align: center;
+  background-color: var(--clr-dark-grayish-blue);
+
+  padding: 40px 24px clamp(70px, 5vw, 80px) 24px;
+
+  width: calc(100% - 2rem);
+  max-width: 540px;
+  margin-inline: auto;
+
+  border-radius: 10px;
+
+  .advice-value {
+    text-transform: uppercase;
+    color: var(--clr-neon-green);
+    font-size: 0.75rem;
+    letter-spacing: 3.4px;
+  }
+
+  .divider {
+    width: 100%;
+    margin-top: clamp(24px, 5vw, 40px);
+  }
+
+  #advice {
+    line-height: 150%;
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
+    margin-top: 24px;
+  }
+
+  #generate-advice {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -25px;
+
+    padding: 1.25rem;
+    background-color: var(--clr-neon-green);
+    border-radius: 100%;
+
+    cursor: pointer;
+
+    transition: box-shadow 500ms ease;
+
+    // Prevent hover on mobile
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        box-shadow: 0px 0px 40px #53ffaa;
+      }
+    }
+  }
+}
+
+.rotate-dice {
+  img {
+    transition: transform 600ms ease-in-out;
+    transform: rotate(360deg);
+  }
 }
