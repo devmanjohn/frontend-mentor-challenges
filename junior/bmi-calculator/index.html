@@ -32,17 +32,19 @@
 
     <main id="homepage">
       <section class="landing-hero">
-        <h1 class="heading">
-          Body Mass
-          <br class="tablet-text-break" />
-          Index Calculator
-        </h1>
-        <p class="hero-snippet">
-          Better understand your weight in relation to your height using our
-          body mass index (BM) calculator. While BMI is not the sole determinant
-          of a healthy weight, it offers a valuable starting point to evaluate
-          your overall health and well-being.
-        </p>
+        <div class="wrapper">
+          <h1 class="heading">
+            Body Mass
+            <br class="tablet-text-break" />
+            Index Calculator
+          </h1>
+          <p class="hero-snippet">
+            Better understand your weight in relation to your height using our
+            body mass index (BM) calculator. While BMI is not the sole
+            determinant of a healthy weight, it offers a valuable starting point
+            to evaluate your overall health and well-being.
+          </p>
+        </div>
       </section>
 
       <section class="details-card">
@@ -196,6 +198,11 @@
           />
 
           <div class="bmi-explanation-content">
+            <img
+              class="arrow-img"
+              src="./assets/images/pattern-curved-line-right.svg"
+              alt=""
+            />
             <h2 class="heading">What your BMI result means</h2>
             <p class="text">
               A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
@@ -263,13 +270,6 @@
             </p>
           </div>
 
-          <!-- arrow image -->
-          <img
-            class="arrow-img"
-            src="./assets/images/pattern-curved-line-right.svg"
-            alt=""
-          />
-
           <!-- gender card -->
           <div class="limitation-card gendar-card">
             <div class="title-wrapper">
@@ -283,8 +283,15 @@
             </p>
           </div>
 
+          <!-- arrow image -->
+          <img
+            class="arrow-img"
+            src="./assets/images/pattern-curved-line-right.svg"
+            alt=""
+          />
+
           <!-- age card -->
-          <div class="limitation-card gendar-card">
+          <div class="limitation-card age-card">
             <div class="title-wrapper">
               <img src="./assets/images/icon-cake.svg" alt="" />
               <h5 class="title">Age</h5>
@@ -296,7 +303,7 @@
           </div>
 
           <!-- muscle card -->
-          <div class="limitation-card gendar-card">
+          <div class="limitation-card muscle-card">
             <div class="title-wrapper">
               <img src="./assets/images/icon-muscle.svg" alt="" />
               <h5 class="title">Muscle</h5>
@@ -308,7 +315,7 @@
           </div>
 
           <!-- pregnancy card -->
-          <div class="limitation-card gendar-card">
+          <div class="limitation-card pregnancy-card">
             <div class="title-wrapper">
               <img src="./assets/images/icon-pregnancy.svg" alt="" />
               <h5 class="title">Pregnancy</h5>
@@ -321,7 +328,7 @@
           </div>
 
           <!-- race card -->
-          <div class="limitation-card gendar-card">
+          <div class="limitation-card race-card">
             <div class="title-wrapper">
               <img src="./assets/images/icon-race.svg" alt="" />
               <h5 class="title">Race</h5>

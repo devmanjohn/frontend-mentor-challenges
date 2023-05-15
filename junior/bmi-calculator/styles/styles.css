@@ -189,6 +189,17 @@ header {
 header img {
   width: 40px;
 }
+@media screen and (min-width: 1440px) {
+  header {
+    justify-content: flex-start;
+    max-width: 1160px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+  header img {
+    width: 64px;
+  }
+}
 
 /*===RESUSED CLASSES===*/
 .hidden {
@@ -205,7 +216,7 @@ header img {
 }
 
 /*===HERO SECTION===*/
-.landing-hero {
+.landing-hero .wrapper {
   text-align: center;
   padding-top: 96px;
   padding-inline: 24px;
@@ -214,7 +225,7 @@ header img {
   border-radius: 0px 0px 35px 35px;
 }
 .landing-hero .heading {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 600;
   color: var(--clr-gunmetal);
 }
@@ -222,6 +233,26 @@ header img {
   margin-top: 1rem;
   color: var(--clr-dark-electric-blue);
   line-height: 150%;
+}
+@media screen and (min-width: 1440px) {
+  .landing-hero {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+  .landing-hero .wrapper {
+    max-width: 978px;
+    text-align: left;
+    padding: 7rem;
+    padding-top: 14rem;
+    padding-bottom: 10rem;
+  }
+  .landing-hero .heading {
+    font-size: 4rem;
+  }
+  .landing-hero .hero-snippet {
+    max-width: 465px;
+    margin-top: 2rem;
+  }
 }
 
 /*===BMI DETAILS CARD===*/
@@ -243,6 +274,13 @@ header img {
 @media screen and (min-width: 768px) {
   .details-card {
     width: calc(100% - 5rem);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .details-card {
+    max-width: 565px;
+    margin-top: -32rem;
+    transform: translateX(300px);
   }
 }
 
@@ -376,6 +414,9 @@ header img {
   margin-inline: auto;
   margin-top: 2rem;
 }
+.bmi-explanation .bmi-explanation-content .arrow-img {
+  display: none;
+}
 .bmi-explanation .bmi-explanation-content .heading {
   font-weight: 600;
   color: var(--clr-gunmetal);
@@ -394,11 +435,41 @@ header img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    align-items: center;
     transform: translateX(-50px);
   }
   .bmi-explanation .wrapper img {
     max-width: 110%;
     transform: translateX(-25px);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .bmi-explanation {
+    margin-top: 10rem;
+  }
+  .bmi-explanation .bmi-explanation-content {
+    position: relative;
+    transform: translateY(50px);
+  }
+  .bmi-explanation .bmi-explanation-content .arrow-img {
+    display: block;
+    rotate: -110deg;
+    position: absolute;
+    top: -160px;
+    right: 0px;
+  }
+  .bmi-explanation .bmi-explanation-content .heading {
+    font-size: 2.5rem;
+  }
+  .bmi-explanation .wrapper {
+    max-width: 1160px;
+    margin-inline: auto;
+    gap: 8rem;
+    transform: translateX(0);
+  }
+  .bmi-explanation .wrapper img {
+    max-width: 100%;
+    transform: translateX(0);
   }
 }
 
@@ -431,6 +502,23 @@ header img {
   .bmi-advice .advice-card {
     display: flex;
     gap: 2rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .bmi-advice {
+    max-width: 1400px;
+    margin-inline: auto;
+    border-radius: 1rem;
+  }
+  .bmi-advice .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    max-width: 1160px;
+    margin-inline: auto;
+  }
+  .bmi-advice .advice-card {
+    display: block;
   }
 }
 
@@ -487,5 +575,32 @@ header img {
   }
   .limiations .limitation-card:nth-child(7) {
     transform: translateX(50%);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .limiations {
+    max-width: 1160px;
+    margin-inline: auto;
+    text-align: left;
+  }
+  .limiations .wrapper {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .limiations .text-content {
+    max-width: 560px;
+  }
+  .limiations .text-content .heading {
+    font-size: 3rem;
+  }
+  .limiations .gendar-card {
+    transform: translateX(-75px);
+  }
+  .limiations .arrow-img {
+    display: block;
+    transform: translateX(150px);
+  }
+  .limiations .limitation-card:nth-child(6) {
+    transform: translateX(180px);
   }
 }/*# sourceMappingURL=styles.css.map */
