@@ -255,6 +255,8 @@ header {
 
 /*===BMI EXPLANATION===*/
 .bmi-explanation {
+  margin-top: 3rem;
+
   .bmi-explanation-content {
     width: calc(100% - 2.5rem);
     margin-inline: auto;
@@ -274,4 +276,90 @@ header {
   }
 }
 
-/*===BMI EXPLANATION===*/
+/*===BMI ADVICE===*/
+.bmi-advice {
+  background: linear-gradient(
+    290.1deg,
+    rgba(214, 230, 254, 0.25) 0%,
+    rgba(214, 252, 254, 0) 100%
+  );
+
+  padding: 1.5rem;
+  padding-top: 56px;
+  padding-bottom: 56px;
+
+  margin-top: 76px;
+
+  .advice-card {
+    margin-top: 32px;
+    .advice-content {
+      .heading {
+        margin-top: 1.5rem;
+
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--clr-gunmetal);
+      }
+
+      .text {
+        margin-top: 1.5rem;
+
+        line-height: 150%;
+        color: var(--clr-dark-electric-blue);
+      }
+    }
+  }
+}
+
+/*===LIMIATIONS===*/
+.limiations {
+  text-align: center;
+  margin-top: 4.5rem;
+  padding-bottom: 6rem;
+
+  .wrapper {
+    width: calc(100% - 3.5rem);
+    margin-inline: auto;
+
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .text-content {
+    .heading {
+      color: var(--clr-gunmetal);
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    .text {
+      margin-top: 1.5rem;
+      color: var(--clr-dark-electric-blue);
+      line-height: 150%;
+    }
+  }
+
+  .arrow-img {
+    display: none;
+  }
+
+  .limitation-card {
+    background-color: var(--clr-white);
+    box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+    border-radius: 16px;
+    padding: 1.5rem;
+
+    .title-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .text {
+      text-align: left;
+      margin-top: 1.5rem;
+      color: var(--clr-dark-electric-blue);
+      line-height: 150%;
+    }
+  }
+}
