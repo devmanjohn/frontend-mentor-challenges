@@ -83,51 +83,89 @@
         </div>
 
         <div id="metric-inputs" class="inputs-container">
-          <label class="custom-input" for="metric">
+          <label class="custom-input" for="cm">
             <span class="input-label">Height</span>
             <div class="input-wrapper">
-              <input type="number" name="cm" id="cm" />
+              <input
+                type="number"
+                name="cm"
+                id="cm"
+                min="54.64"
+                value="185"
+                onkeyup="calculateMetricBMI()"
+              />
               <span class="measurement">cm</span>
             </div>
           </label>
 
-          <label class="custom-input" for="metric">
+          <label class="custom-input" for="kg">
             <span class="input-label">Weight</span>
             <div class="input-wrapper">
-              <input type="number" name="kg" id="kg" />
+              <input
+                type="number"
+                name="kg"
+                id="kg"
+                min="2.5"
+                value="80"
+                onkeyup="calculateMetricBMI()"
+              />
               <span class="measurement">kg</span>
             </div>
           </label>
         </div>
 
         <div id="imperial-inputs" class="inputs-container hidden">
-          <label class="custom-input" for="metric">
+          <label class="custom-input" for="ft">
             <span class="input-label">Height</span>
             <div class="input-wrapper">
-              <input type="number" name="ft" id="ft" />
+              <input
+                type="number"
+                name="ft"
+                id="ft"
+                value="5"
+                onkeyup="calculateImperialBMI()"
+              />
               <span class="measurement">ft</span>
             </div>
           </label>
 
-          <label class="custom-input" for="metric">
+          <label class="custom-input" for="in">
             <span style="visibility: hidden" class="input-label">Weight</span>
             <div class="input-wrapper">
-              <input type="number" name="in" id="in" />
+              <input
+                type="number"
+                name="in"
+                id="in"
+                value="11"
+                onkeyup="calculateImperialBMI()"
+              />
               <span class="measurement">in</span>
             </div>
           </label>
-          <label class="custom-input" for="metric">
+          <label class="custom-input" for="st">
             <span class="input-label">Weight</span>
             <div class="input-wrapper">
-              <input type="number" name="st" id="st" />
+              <input
+                type="number"
+                name="st"
+                id="st"
+                value="11"
+                onkeyup="calculateImperialBMI()"
+              />
               <span class="measurement">st</span>
             </div>
           </label>
 
-          <label class="custom-input" for="metric">
+          <label class="custom-input" for="lbs">
             <span style="visibility: hidden" class="input-label">Weight</span>
             <div class="input-wrapper">
-              <input type="number" name="lbs" id="lbs" />
+              <input
+                type="number"
+                name="lbs"
+                id="lbs"
+                value="4"
+                onkeyup="calculateImperialBMI()"
+              />
               <span class="measurement">lbs</span>
             </div>
           </label>
@@ -137,7 +175,7 @@
         <div id="bmi-results" class="bmi-results">
           <div>
             <p class="bmi-heading">Your BMI is...</p>
-            <span id="bmi-result">23.4</span>
+            <span id="bmi-result">0.00</span>
           </div>
           <div>
             <p class="bmi-details">
