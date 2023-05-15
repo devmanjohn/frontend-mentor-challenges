@@ -45,13 +45,14 @@ header {
 
 /*===RESUSED CLASSES===*/
 .hidden {
-  display: none;
+  display: none !important; // override id values
 }
 
-.row {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-end;
+.tablet-text-break {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: unset;
+  }
 }
 
 /*===HERO SECTION===*/
@@ -104,53 +105,8 @@ header {
 }
 
 .bmi-form {
-  display: flex;
-  gap: 2rem;
-}
-
-.input-container {
-  margin-top: 1.75rem;
-
-  .input-label {
-    display: block;
-    margin-bottom: 0.75rem;
-    color: #5e6e85;
-    margin-top: 1rem;
-  }
-}
-
-.custom-input {
-  position: relative;
-  display: block;
-  margin-top: 1rem;
-
-  input[type='number'] {
-    width: 100%;
-    padding: 20px 24px;
-
-    color: var(--clr-gunmetal);
-    font-weight: 600;
-    font-size: 24px;
-
-    border-radius: 12px;
-    border: 1px solid var(--clr-borders);
-  }
-
-  .measurement {
-    position: absolute;
-    right: 24px;
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    color: var(--clr-blue);
-    font-weight: 600;
-    font-size: 24px;
-  }
-
-  &:focus {
-    outline: none;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .custom-radio-btn {
@@ -196,8 +152,63 @@ header {
   }
 }
 
+.inputs-container {
+  margin-top: 1.5rem;
+
+  .custom-input {
+    font-size: 0.875rem;
+
+    .input-label {
+      color: #5e6e85;
+
+      display: block;
+    }
+
+    .input-wrapper {
+      position: relative;
+
+      input[type='number'] {
+        border: 1px solid #d8e2e7;
+        padding: 1rem;
+        border-radius: 12px;
+
+        font-size: 1.5rem;
+        color: var(--clr-gunmetal);
+        font-weight: 600;
+        width: 100%;
+
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .measurement {
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+
+        font-size: 1.5rem;
+        color: var(--clr-blue);
+        font-weight: 600;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+#imperial-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
 .bmi-results {
-  background-color: var(--clr-blue);
+  background: linear-gradient(90deg, #345ff7 0%, #587dff 100%);
 
   margin-top: 1.5rem;
   padding: 1.5rem;
@@ -223,6 +234,21 @@ header {
     line-height: 150%;
     em {
       font-weight: 600;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    border-top-right-radius: 10rem;
+    border-bottom-right-radius: 10rem;
+
+    padding: 2rem;
+
+    .bmi-details {
+      margin-top: 0;
     }
   }
 }
