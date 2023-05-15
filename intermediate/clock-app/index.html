@@ -48,42 +48,72 @@
   </head>
   <body class="morning">
     <main>
-      <!-- quote section -->
-      <section class="quote-block">
-        <blockquote>
-          <p class="quote">
-            The science of operations, as derived from mathematics more
-            especially, is a science of itself, and has its own abstract truth
-            and value.
-          </p>
-          <cite class="author">Ada Lovelace</cite>
-        </blockquote>
+      <div class="main-wrapper">
+        <!-- quote section -->
+        <section class="quote-block">
+          <blockquote>
+            <p class="quote">
+              The science of operations, as derived from mathematics more
+              especially, is a science of itself, and has its own abstract truth
+              and value.
+            </p>
+            <cite class="author">Ada Lovelace</cite>
+          </blockquote>
 
-        <button class="refresh-btn" type="button" aria-label="refresh quote">
-          <img src="./assets/desktop/icon-refresh.svg" alt="" />
-        </button>
-      </section>
+          <button class="refresh-btn" type="button" aria-label="refresh quote">
+            <img src="./assets/desktop/icon-refresh.svg" alt="" />
+          </button>
+        </section>
 
-      <!-- timezone settings -->
-      <section class="timezone-block">
-        <div class="timezone-details">
-          <p class="greetings-message">
-            <img src="./assets/desktop/icon-sun.svg" alt="" />
-            <span class="message">
-              Good morning
-              <span class="tablet-only">, it's currently</span>
-            </span>
-          </p>
+        <!-- timezone settings -->
+        <section class="timezone-block">
+          <div class="timezone-details">
+            <p class="greetings-message">
+              <img src="./assets/desktop/icon-sun.svg" alt="" />
+              <span class="message">
+                Good morning
+                <span class="tablet-only">, it's currently</span>
+              </span>
+            </p>
 
-          <h1 class="current-time">11:37<span class="timezone">BST</span></h1>
+            <h1 class="current-time">11:37<span class="timezone">BST</span></h1>
 
-          <p class="location">In London, UK</p>
+            <p class="location">In London, UK</p>
+          </div>
+
+          <button class="expand-details-btn" type="button">
+            More
+            <img class="arrow" src="/assets/desktop/icon-arrow-up.svg" alt="" />
+          </button>
+        </section>
+      </div>
+
+      <section class="extra-details">
+        <hr class="center-divider" />
+
+        <!-- current timezone -->
+        <div id="current-timezone" class="detail-block">
+          <h2 class="title">Current Timezone</h2>
+          <p class="detail">Europe/London</p>
         </div>
 
-        <button class="expand-details-btn" type="button">
-          More
-          <img class="arrow" src="/assets/desktop/icon-arrow-up.svg" alt="" />
-        </button>
+        <!-- day of the week -->
+        <div id="day-of-the-week" class="detail-block">
+          <h2 class="title">Day of The Week</h2>
+          <p class="detail">5</p>
+        </div>
+
+        <!-- day of the year -->
+        <div id="day-of-the-year" class="detail-block">
+          <h2 class="title">Day of The Year</h2>
+          <p class="detail">295</p>
+        </div>
+
+        <!-- week number -->
+        <div id="week-number" class="detail-block">
+          <h2 class="title">Week Number</h2>
+          <p class="detail">42</p>
+        </div>
       </section>
     </main>
   </body>

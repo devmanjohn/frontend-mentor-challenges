@@ -6,12 +6,13 @@ body {
   color: #fff;
 }
 
-main {
+.main-wrapper {
   height: 100vh;
   padding: 2rem;
 
   display: flex;
   flex-direction: column;
+  //   transform: translateY(-40%);
 }
 
 .tablet-only {
@@ -58,6 +59,7 @@ main {
   }
 }
 
+/*===TIMEZONE BLOCK===*/
 .timezone-block {
   margin-top: auto;
   .timezone-details {
@@ -99,5 +101,38 @@ main {
     padding: 0.5rem 0.5rem 0.5rem 1.5rem;
     gap: 1rem;
     border-radius: 2rem;
+  }
+}
+
+/*===EXTRA DETAILS BLOCK===*/
+.extra-details {
+  display: grid;
+  gap: 1rem;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20.3871px);
+
+  padding: 4rem 1.5rem;
+
+  //   transform: translateY(-100%);
+  .center-divider {
+    display: none;
+  }
+
+  .detail-block {
+    display: flex;
+    justify-content: space-between;
+
+    color: #303030;
+
+    .title {
+      font-size: 0.625rem;
+      letter-spacing: 3px;
+    }
+
+    .detail {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
   }
 }
