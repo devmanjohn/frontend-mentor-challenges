@@ -253,8 +253,25 @@ header {
   }
 }
 
-/*===MAN EATING SECTION===*/
-.man-eating {
-  display: block;
-  margin-top: 4rem;
+/*===BMI EXPLANATION===*/
+.bmi-explanation {
+  .bmi-explanation-content {
+    width: calc(100% - 2.5rem);
+    margin-inline: auto;
+    margin-top: 2rem;
+
+    .heading {
+      font-weight: 600;
+      color: var(--clr-gunmetal);
+      font-size: 32px;
+    }
+
+    .text {
+      margin-top: 2rem;
+      color: var(--clr-dark-electric-blue);
+      line-height: 150%;
+    }
+  }
 }
+
+/*===BMI EXPLANATION===*/

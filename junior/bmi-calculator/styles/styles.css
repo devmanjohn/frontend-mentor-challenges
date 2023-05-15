@@ -362,8 +362,21 @@ header img {
   }
 }
 
-/*===MAN EATING SECTION===*/
-.man-eating {
-  display: block;
-  margin-top: 4rem;
-}/*# sourceMappingURL=styles.css.map */
+/*===BMI EXPLANATION===*/
+.bmi-explanation .bmi-explanation-content {
+  width: calc(100% - 2.5rem);
+  margin-inline: auto;
+  margin-top: 2rem;
+}
+.bmi-explanation .bmi-explanation-content .heading {
+  font-weight: 600;
+  color: var(--clr-gunmetal);
+  font-size: 32px;
+}
+.bmi-explanation .bmi-explanation-content .text {
+  margin-top: 2rem;
+  color: var(--clr-dark-electric-blue);
+  line-height: 150%;
+}
+
+/*===BMI EXPLANATION===*//*# sourceMappingURL=styles.css.map */
