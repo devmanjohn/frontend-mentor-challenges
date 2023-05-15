@@ -162,6 +162,7 @@ header {
   gap: 1rem;
 
   margin-top: 1.75rem;
+  cursor: pointer;
 
   .radio-icon {
     width: 31px;
@@ -175,6 +176,12 @@ header {
     border: 1px solid var(--clr-borders);
   }
 
+  &:hover {
+    .radio-icon {
+      border-color: var(--clr-blue);
+    }
+  }
+
   p {
     font-weight: 600;
   }
@@ -185,6 +192,7 @@ header {
 
   input[type='radio']:checked ~ .radio-icon {
     background-color: rgba(52, 95, 246, 0.15);
+    border-color: transparent;
 
     &::after {
       content: '';
@@ -226,6 +234,14 @@ header {
 
         margin-top: 0.5rem;
         margin-bottom: 1rem;
+        &:focus {
+          outline-color: var(--clr-blue);
+        }
+      }
+
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
       }
 
       .measurement {

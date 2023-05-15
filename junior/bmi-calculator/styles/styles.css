@@ -294,6 +294,7 @@ header img {
   align-items: center;
   gap: 1rem;
   margin-top: 1.75rem;
+  cursor: pointer;
 }
 .custom-radio-btn .radio-icon {
   width: 31px;
@@ -303,6 +304,9 @@ header img {
   place-items: center;
   border: 1px solid var(--clr-borders);
 }
+.custom-radio-btn:hover .radio-icon {
+  border-color: var(--clr-blue);
+}
 .custom-radio-btn p {
   font-weight: 600;
 }
@@ -311,6 +315,7 @@ header img {
 }
 .custom-radio-btn input[type=radio]:checked ~ .radio-icon {
   background-color: rgba(52, 95, 246, 0.15);
+  border-color: transparent;
 }
 .custom-radio-btn input[type=radio]:checked ~ .radio-icon::after {
   content: "";
@@ -344,6 +349,13 @@ header img {
   width: 100%;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+.inputs-container .custom-input .input-wrapper input[type=number]:focus {
+  outline-color: var(--clr-blue);
+}
+.inputs-container .custom-input .input-wrapper input[type=number]::-webkit-inner-spin-button,
+.inputs-container .custom-input .input-wrapper input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
 }
 .inputs-container .custom-input .input-wrapper .measurement {
   position: absolute;
