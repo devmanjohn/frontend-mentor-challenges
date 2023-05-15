@@ -25,7 +25,7 @@
     <main>
       <div class="advice-card">
         <!-- advice -->
-        <p>Advice <span id="index-value">#117</span></p>
+        <p class="advice-value">Advice <span id="index">#117</span></p>
         <p id="advice">
           “It is easy to sit up and take notice, what's difficult is getting up
           and taking action.”
@@ -33,6 +33,7 @@
 
         <!-- divider -->
         <img
+          class="divider"
           src="./assets/images/pattern-divider-desktop.svg"
           srcset="
             ./assets/images/pattern-divider-desktop.svg 1200w,
@@ -42,7 +43,7 @@
         />
 
         <!-- generate new advice -->
-        <button role="button" id="generate-advice">
+        <button role="button" id="generate-advice" onclick="generateAdvice()">
           <img src="./assets/images/icon-dice.svg" alt="" />
         </button>
       </div>
