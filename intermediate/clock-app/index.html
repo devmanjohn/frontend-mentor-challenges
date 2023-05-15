@@ -65,11 +65,14 @@
       </section>
 
       <!-- timezone settings -->
-      <section>
+      <section class="timezone-block">
         <div class="timezone-details">
           <p class="greetings-message">
             <img src="./assets/desktop/icon-sun.svg" alt="" />
-            <span class="message">Good morning, it's currently</span>
+            <span class="message">
+              Good morning
+              <span class="tablet-only">, it's currently</span>
+            </span>
           </p>
 
           <h1 class="current-time">11:37<span class="timezone">BST</span></h1>
@@ -79,9 +82,7 @@
 
         <button class="expand-details-btn" type="button">
           More
-          <span class="arrow">
-            <img src="/assets/desktop/icon-arrow-up.svg" alt="" />
-          </span>
+          <img class="arrow" src="/assets/desktop/icon-arrow-up.svg" alt="" />
         </button>
       </section>
     </main>
