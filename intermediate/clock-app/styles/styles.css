@@ -257,6 +257,7 @@ body {
 .extra-details .detail-block {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   color: #303030;
 }
 .extra-details .detail-block .title {
