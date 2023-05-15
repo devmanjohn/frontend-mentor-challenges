@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boilerplate Code</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png" />
+    <title>Clock App | Frontend Mentor Challenge</title>
 
     <!-- stylesheets -->
     <link rel="stylesheet" href="./styles/styles.css" />
@@ -22,6 +23,7 @@
       integrity="sha384-xjP10QrW7PA6WOlPOkWwDcyKJeREvuwWVAc5aS9/ObhcWcdopa9q3l7NXObVJQ8r"
       crossorigin="anonymous"
     ></script>
+
     <!-- scroll trigger -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
@@ -35,8 +37,53 @@
       integrity="sha384-ShnQNZcSZ7oNdquVpb1aZ7m7eHl0WYSrtcQIP5SuIV3jE+NZWNqtbMkR+/UAhNfe"
       crossorigin="anonymous"
     ></script>
+
+    <!-- typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <main></main>
+  <body class="morning">
+    <main>
+      <!-- quote section -->
+      <section class="quote-block">
+        <blockquote>
+          <p class="quote">
+            The science of operations, as derived from mathematics more
+            especially, is a science of itself, and has its own abstract truth
+            and value.
+          </p>
+          <cite class="author">Ada Lovelace</cite>
+        </blockquote>
+
+        <button class="refresh-btn" type="button" aria-label="refresh quote">
+          <img src="./assets/desktop/icon-refresh.svg" alt="" />
+        </button>
+      </section>
+
+      <!-- timezone settings -->
+      <section>
+        <div class="timezone-details">
+          <p class="greetings-message">
+            <img src="./assets/desktop/icon-sun.svg" alt="" />
+            <span class="message">Good morning, it's currently</span>
+          </p>
+
+          <h1 class="current-time">11:37<span class="timezone">BST</span></h1>
+
+          <p class="location">In London, UK</p>
+        </div>
+
+        <button class="expand-details-btn" type="button">
+          More
+          <span class="arrow">
+            <img src="/assets/desktop/icon-arrow-up.svg" alt="" />
+          </span>
+        </button>
+      </section>
+    </main>
   </body>
 </html>
