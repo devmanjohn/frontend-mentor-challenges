@@ -1,1 +1,15 @@
 @use './core/reset';
+
+:root {
+  --clr-neon-green: ##53ffaa;
+  --clr-light-cyan: #cee3e9;
+  --clr-dark-blue: #202733;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--clr-dark-blue);
+
+  display: grid;
+  place-items: center;
+}
