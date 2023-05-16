@@ -203,7 +203,7 @@ body {
 
 /*===BACKGROUND CLASSES===*/
 .morning {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-daytime.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
 }
 .morning .extra-details {
@@ -213,18 +213,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .morning {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/tablet/bg-image-daytime.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/tablet/bg-image-daytime.jpg");
   }
 }
 @media screen and (min-width: 1024px) {
   .morning {
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/desktop/bg-image-daytime.jpg");
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/desktop/bg-image-daytime.jpg");
     background-size: cover;
   }
 }
 
 .evening {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-nighttime.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../assets/mobile/bg-image-nighttime.jpg");
   background-size: cover;
 }
 .evening .extra-details {
