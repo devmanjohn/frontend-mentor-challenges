@@ -53,7 +53,7 @@ body {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url('/assets/mobile/bg-image-daytime.jpg');
+    url('../assets/mobile/bg-image-daytime.jpg');
   background-size: cover;
 
   .extra-details {
@@ -67,7 +67,7 @@ body {
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url('/assets/tablet/bg-image-daytime.jpg');
+      url('../assets/tablet/bg-image-daytime.jpg');
   }
 
   @media screen and (min-width: 1024px) {
@@ -76,7 +76,7 @@ body {
         rgba(0, 0, 0, 0.4),
         rgba(0, 0, 0, 0.4)
       ),
-      url('/assets/desktop/bg-image-daytime.jpg');
+      url('../assets/desktop/bg-image-daytime.jpg');
     background-size: cover;
   }
 }
@@ -87,7 +87,7 @@ body {
       rgba(0, 0, 0, 0.4),
       rgba(0, 0, 0, 0.4)
     ),
-    url('/assets/mobile/bg-image-nighttime.jpg');
+    url('../assets/mobile/bg-image-nighttime.jpg');
   background-size: cover;
 
   .extra-details {
