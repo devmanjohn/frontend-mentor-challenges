@@ -79,19 +79,22 @@ function updateTime() {
   ).innerHTML = `${formattedTime}<span class="timezone">${timezoneCode}</span>`;
 
   if (hours >= 5 && hours < 12) {
-    document.getElementById('theme-icon').src = '/assets/desktop/icon-sun.svg';
+    document.getElementById('theme-icon').src =
+      '../assets/desktop/icon-sun.svg';
     document.getElementById(
       'theme-message'
     ).innerHTML = `Good morning<span class="tablet-only">, it's currently</span>`;
     document.querySelector('body').classList.add('morning');
   } else if (hours >= 12 && hours < 18) {
-    document.getElementById('theme-icon').src = '/assets/desktop/icon-sun.svg';
+    document.getElementById('theme-icon').src =
+      '../assets/desktop/icon-sun.svg';
     document.getElementById(
       'theme-message'
     ).innerHTML = `Good afternoon<span class="tablet-only">, it's currently</span>`;
     document.querySelector('body').classList.add('morning');
   } else {
-    document.getElementById('theme-icon').src = '/assets/desktop/icon-moon.svg';
+    document.getElementById('theme-icon').src =
+      '../assets/desktop/icon-moon.svg';
     document.getElementById(
       'theme-message'
     ).innerHTML = `Good evening<span class="tablet-only">, it's currently</span>`;
