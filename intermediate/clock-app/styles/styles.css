@@ -164,6 +164,11 @@ body {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 768px) {
+  .main-wrapper {
+    padding: 6rem;
+  }
+}
 
 .tablet-only {
   display: none;
@@ -177,6 +182,18 @@ body {
 /*===BACKGROUND CLASSES===*/
 .morning {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-daytime.jpg");
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .morning {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/tablet/bg-image-daytime.jpg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .morning {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/desktop/bg-image-daytime.jpg");
+    background-size: cover;
+  }
 }
 
 /*===QUOTE BLOCK===*/
@@ -200,6 +217,15 @@ body {
   margin-top: 8px;
   font-size: 0.75rem;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .quote-block .quote,
+  .quote-block .author {
+    font-size: 1.125rem;
+  }
+  .quote-block .author {
+    margin-top: 1.5rem;
+  }
 }
 
 /*===TIMEZONE BLOCK===*/
@@ -241,6 +267,23 @@ body {
   gap: 1rem;
   border-radius: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .timezone-block .timezone-details .greetings-message {
+    font-size: 1.125rem;
+  }
+  .timezone-block .timezone-details .current-time {
+    font-size: 10.938rem;
+  }
+  .timezone-block .timezone-details .current-time .timezone {
+    font-size: 2rem;
+  }
+  .timezone-block .timezone-details .location {
+    font-size: 1.125rem;
+  }
+  .timezone-block .expand-details-btn {
+    margin-top: 5rem;
+  }
+}
 
 /*===EXTRA DETAILS BLOCK===*/
 .extra-details {
@@ -263,8 +306,27 @@ body {
 .extra-details .detail-block .title {
   font-size: 0.625rem;
   letter-spacing: 3px;
+  text-transform: uppercase;
 }
 .extra-details .detail-block .detail {
   font-size: 1.25rem;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .extra-details {
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem;
+    gap: 6rem;
+  }
+  .extra-details .detail-block {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .extra-details .detail-block .title {
+    font-size: 0.8rem;
+  }
+  .extra-details .detail-block .detail {
+    font-size: 40px;
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

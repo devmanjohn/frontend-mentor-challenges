@@ -12,7 +12,10 @@ body {
 
   display: flex;
   flex-direction: column;
-  //   transform: translateY(-40%);
+
+  @media screen and (min-width: 768px) {
+    padding: 6rem;
+  }
 }
 
 .tablet-only {
@@ -30,6 +33,26 @@ body {
       rgba(0, 0, 0, 0.4)
     ),
     url('/assets/mobile/bg-image-daytime.jpg');
+  background-size: cover;
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('/assets/tablet/bg-image-daytime.jpg');
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('/assets/desktop/bg-image-daytime.jpg');
+    background-size: cover;
+  }
 }
 
 /*===QUOTE BLOCK===*/
@@ -57,11 +80,23 @@ body {
     font-size: 0.75rem;
     font-weight: bold;
   }
+
+  @media screen and (min-width: 768px) {
+    .quote,
+    .author {
+      font-size: 1.125rem;
+    }
+
+    .author {
+      margin-top: 1.5rem;
+    }
+  }
 }
 
 /*===TIMEZONE BLOCK===*/
 .timezone-block {
   margin-top: auto;
+
   .timezone-details {
     .greetings-message {
       text-transform: uppercase;
@@ -102,6 +137,29 @@ body {
     gap: 1rem;
     border-radius: 2rem;
   }
+
+  @media screen and (min-width: 768px) {
+    .timezone-details {
+      .greetings-message {
+        font-size: 1.125rem;
+      }
+
+      .current-time {
+        font-size: 10.938rem;
+        .timezone {
+          font-size: 2rem;
+        }
+      }
+
+      .location {
+        font-size: 1.125rem;
+      }
+    }
+
+    .expand-details-btn {
+      margin-top: 5rem;
+    }
+  }
 }
 
 /*===EXTRA DETAILS BLOCK===*/
@@ -129,11 +187,32 @@ body {
     .title {
       font-size: 0.625rem;
       letter-spacing: 3px;
+      text-transform: uppercase;
     }
 
     .detail {
       font-size: 1.25rem;
       font-weight: 700;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    padding: 6rem;
+    gap: 6rem;
+
+    .detail-block {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .title {
+        font-size: 0.8rem;
+      }
+
+      .detail {
+        font-size: 40px;
+        margin-top: 1rem;
+      }
     }
   }
 }
