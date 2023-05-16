@@ -205,8 +205,26 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 
+    cursor: pointer;
+
     img {
-      rotate: 180deg;
+      transition-property: transform, rotate;
+      transition: 300ms ease;
+      transform: rotate(180deg);
+    }
+
+    &.flip {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        img {
+          opacity: 0.75;
+        }
+      }
     }
   }
 

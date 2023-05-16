@@ -318,9 +318,20 @@ body {
   letter-spacing: 3px;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .timezone-block .expand-details-btn img {
-  rotate: 180deg;
+  transition-property: transform, rotate;
+  transition: 300ms ease;
+  transform: rotate(180deg);
+}
+.timezone-block .expand-details-btn.flip img {
+  transform: rotate(0deg);
+}
+@media screen and (min-width: 1024px) {
+  .timezone-block .expand-details-btn:hover img {
+    opacity: 0.75;
+  }
 }
 @media screen and (min-width: 768px) {
   .timezone-block .timezone-details .greetings-message {
