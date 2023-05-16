@@ -259,6 +259,7 @@ body {
 }
 .quote-block button {
   width: 40px;
+  cursor: pointer;
 }
 .quote-block button img {
   width: 100%;

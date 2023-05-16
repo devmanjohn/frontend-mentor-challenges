@@ -29,8 +29,6 @@ async function fetchIpDetails() {
   const response = await fetch(`${IP_BASE_API_URL}&ip=${currentIp}`);
   const data = await response.json();
 
-  console.log(data);
-
   timezoneID = data.data.timezone.id;
   timezoneCode = data.data.timezone.code;
   currentCity = data.data.location.city.name;
@@ -58,6 +56,14 @@ async function getWorldData() {
   document.getElementById('week-number').innerHTML = week_number;
 }
 
+async function updateQuote() {
+  const response = await fetch('https://api.quotable.io/random');
+  const data = await response.json();
+
+  document.querySelector('.author').innerHTML = data.author;
+  document.querySelector('.quote').innerHTML = data.content;
+}
+
 // Keep updating the time based on users system.
 function updateTime() {
   const currentTime = new Date();
@@ -71,7 +77,31 @@ function updateTime() {
   document.querySelector(
     '.current-time'
   ).innerHTML = `${formattedTime}<span class="timezone">${timezoneCode}</span>`;
+
+  if (hours >= 5 && hours < 12) {
+    document.getElementById('theme-icon').src = '/assets/desktop/icon-sun.svg';
+    document.getElementById(
+      'theme-message'
+    ).innerHTML = `Good morning<span class="tablet-only">, it's currently</span>`;
+    document.querySelector('body').classList.add('morning');
+  } else if (hours >= 12 && hours < 18) {
+    document.getElementById('theme-icon').src = '/assets/desktop/icon-sun.svg';
+    document.getElementById(
+      'theme-message'
+    ).innerHTML = `Good afternoon<span class="tablet-only">, it's currently</span>`;
+    document.querySelector('body').classList.add('morning');
+  } else {
+    document.getElementById('theme-icon').src = '/assets/desktop/icon-moon.svg';
+    document.getElementById(
+      'theme-message'
+    ).innerHTML = `Good evening<span class="tablet-only">, it's currently</span>`;
+    document.querySelector('body').classList.add('evening');
+  }
 }
+
+document.querySelector('.refresh-btn').addEventListener('click', () => {
+  updateQuote();
+});
 
 // Fetch IP & Data...
 fetchIp();
