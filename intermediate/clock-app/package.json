@@ -1,0 +1,20 @@
+{
+  "name": "clock-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "webpack --env production --mode production"
+  },
+  "private": "true",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  }
+}
