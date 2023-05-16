@@ -4,6 +4,7 @@ body {
   font-family: 'Inter', sans-serif;
   height: 100vh;
   color: #fff;
+  overflow: hidden;
 }
 
 .main-wrapper {
@@ -12,6 +13,8 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  transition: transform 400ms ease-in-out;
 
   @media screen and (min-width: 768px) {
     padding: 6rem;
@@ -28,6 +31,18 @@ body {
   display: none;
   @media screen and (min-width: 768px) {
     display: inline;
+  }
+}
+
+.open-details {
+  transform: translateY(-100%);
+}
+
+.translate-timezone {
+  transform: translateY(-300px);
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(-450px);
   }
 }
 
@@ -281,6 +296,7 @@ body {
 .extra-details {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20.3871px);
+  transition: transform 400ms ease-in-out;
 
   .wrapper {
     padding: 4rem 1.5rem;

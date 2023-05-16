@@ -156,6 +156,7 @@ body {
   font-family: "Inter", sans-serif;
   height: 100vh;
   color: #fff;
+  overflow: hidden;
 }
 
 .main-wrapper {
@@ -163,6 +164,7 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  transition: transform 400ms ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .main-wrapper {
@@ -183,6 +185,19 @@ body {
 @media screen and (min-width: 768px) {
   .tablet-only {
     display: inline;
+  }
+}
+
+.open-details {
+  transform: translateY(-100%);
+}
+
+.translate-timezone {
+  transform: translateY(-300px);
+}
+@media screen and (min-width: 768px) {
+  .translate-timezone {
+    transform: translateY(-450px);
   }
 }
 
@@ -377,6 +392,7 @@ body {
   background: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(20.3871px);
           backdrop-filter: blur(20.3871px);
+  transition: transform 400ms ease-in-out;
 }
 .extra-details .wrapper {
   padding: 4rem 1.5rem;
