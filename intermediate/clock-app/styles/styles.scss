@@ -4,6 +4,7 @@ body {
   font-family: 'Inter', sans-serif;
   height: 100vh;
   color: #fff;
+  overflow: hidden;
 }
 
 .main-wrapper {
@@ -12,6 +13,8 @@ body {
 
   display: flex;
   flex-direction: column;
+
+  transition: transform 400ms ease-in-out;
 
   @media screen and (min-width: 768px) {
     padding: 6rem;
@@ -31,6 +34,18 @@ body {
   }
 }
 
+.open-details {
+  transform: translateY(-100%);
+}
+
+.translate-timezone {
+  transform: translateY(-300px);
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(-450px);
+  }
+}
+
 /*===BACKGROUND CLASSES===*/
 .morning {
   background-image: linear-gradient(
@@ -40,6 +55,11 @@ body {
     ),
     url('/assets/mobile/bg-image-daytime.jpg');
   background-size: cover;
+
+  .extra-details {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20.3871px);
+  }
 
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(
@@ -61,6 +81,50 @@ body {
   }
 }
 
+.evening {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('/assets/mobile/bg-image-nighttime.jpg');
+  background-size: cover;
+
+  .extra-details {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20.3871px);
+
+    // color overrides
+    p,
+    h2 {
+      color: white;
+    }
+
+    .center-divider {
+      border-color: #fff;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('/assets/tablet/bg-image-nighttime.jpg');
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('/assets/desktop/bg-image-nighttime.jpg');
+    background-size: cover;
+  }
+}
+
 /*===QUOTE BLOCK===*/
 .quote-block {
   display: flex;
@@ -69,6 +133,7 @@ body {
 
   button {
     width: 40px;
+    cursor: pointer;
     img {
       width: 100%;
     }
@@ -156,8 +221,26 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 
+    cursor: pointer;
+
     img {
-      rotate: 180deg;
+      transition-property: transform, rotate;
+      transition: 300ms ease;
+      transform: rotate(180deg);
+    }
+
+    &.flip {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+
+    @media screen and (min-width: 1024px) {
+      &:hover {
+        img {
+          opacity: 0.75;
+        }
+      }
     }
   }
 
@@ -214,6 +297,7 @@ body {
 .extra-details {
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(20.3871px);
+  transition: transform 400ms ease-in-out;
 
   .wrapper {
     padding: 4rem 1.5rem;

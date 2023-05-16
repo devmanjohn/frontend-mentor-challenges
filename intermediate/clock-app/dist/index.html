@@ -8,35 +8,10 @@
     <title>Clock App | Frontend Mentor Challenge</title>
 
     <!-- stylesheets -->
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="../styles/styles.css" />
 
     <!-- scripts -->
-    <script src="./scripts/index.js" defer></script>
-
-    <!-- gsap -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"
-      integrity="sha384-xjP10QrW7PA6WOlPOkWwDcyKJeREvuwWVAc5aS9/ObhcWcdopa9q3l7NXObVJQ8r"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- scroll trigger -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"
-      integrity="sha384-V0oE5KjuA5fwJoB7Ve6EjvvRB2skf+fPQ1IncPdJ4HurEaHbSKYUoW3Y13UzFcpD"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- swiperjs -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
-      integrity="sha384-ShnQNZcSZ7oNdquVpb1aZ7m7eHl0WYSrtcQIP5SuIV3jE+NZWNqtbMkR+/UAhNfe"
-      crossorigin="anonymous"
-    ></script>
+    <script type="module" src="main.js" defer></script>
 
     <!-- typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -61,7 +36,7 @@
           </blockquote>
 
           <button class="refresh-btn" type="button" aria-label="refresh quote">
-            <img src="./assets/desktop/icon-refresh.svg" alt="" />
+            <img src="/assets/desktop/icon-refresh.svg" alt="" />
           </button>
         </section>
 
@@ -69,8 +44,8 @@
         <section class="timezone-block">
           <div class="timezone-details">
             <p class="greetings-message">
-              <img src="./assets/desktop/icon-sun.svg" alt="" />
-              <span class="message">
+              <img id="theme-icon" src="/assets/desktop/icon-sun.svg" alt="" />
+              <span id="theme-message" class="message">
                 Good morning
                 <span class="tablet-only">, it's currently</span>
               </span>
@@ -78,42 +53,45 @@
 
             <h1 class="current-time">11:37<span class="timezone">BST</span></h1>
 
-            <p class="location">In London, UK</p>
+            <p class="location">
+              In <span id="current-city">London</span>,
+              <span id="current-country">UK</span>
+            </p>
           </div>
 
-          <button class="expand-details-btn" type="button">
+          <button id="expand-details" class="expand-details-btn" type="button">
             More
             <img class="arrow" src="/assets/desktop/icon-arrow-up.svg" alt="" />
           </button>
         </section>
       </div>
 
-      <section class="extra-details">
+      <section id="extra-details" class="extra-details">
         <div class="wrapper">
           <hr class="center-divider" />
 
           <!-- current timezone -->
-          <div id="current-timezone" class="detail-block">
+          <div class="detail-block">
             <h2 class="title">Current Timezone</h2>
-            <p class="detail">Europe/London</p>
+            <p id="current-timezone" class="detail">Europe/London</p>
           </div>
 
           <!-- day of the week -->
-          <div id="day-of-the-week" class="detail-block">
+          <div class="detail-block">
             <h2 class="title">Day of The Week</h2>
-            <p class="detail">5</p>
+            <p id="day-of-the-week" class="detail">5</p>
           </div>
 
           <!-- day of the year -->
-          <div id="day-of-the-year" class="detail-block">
+          <div class="detail-block">
             <h2 class="title">Day of The Year</h2>
-            <p class="detail">295</p>
+            <p id="day-of-the-year" class="detail">295</p>
           </div>
 
           <!-- week number -->
-          <div id="week-number" class="detail-block">
+          <div class="detail-block">
             <h2 class="title">Week Number</h2>
-            <p class="detail">42</p>
+            <p id="week-number" class="detail">42</p>
           </div>
         </div>
       </section>

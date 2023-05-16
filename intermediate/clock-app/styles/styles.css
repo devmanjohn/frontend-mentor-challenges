@@ -156,6 +156,7 @@ body {
   font-family: "Inter", sans-serif;
   height: 100vh;
   color: #fff;
+  overflow: hidden;
 }
 
 .main-wrapper {
@@ -163,6 +164,7 @@ body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  transition: transform 400ms ease-in-out;
 }
 @media screen and (min-width: 768px) {
   .main-wrapper {
@@ -186,10 +188,28 @@ body {
   }
 }
 
+.open-details {
+  transform: translateY(-100%);
+}
+
+.translate-timezone {
+  transform: translateY(-300px);
+}
+@media screen and (min-width: 768px) {
+  .translate-timezone {
+    transform: translateY(-450px);
+  }
+}
+
 /*===BACKGROUND CLASSES===*/
 .morning {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
+}
+.morning .extra-details {
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(20.3871px);
+          backdrop-filter: blur(20.3871px);
 }
 @media screen and (min-width: 768px) {
   .morning {
@@ -203,6 +223,34 @@ body {
   }
 }
 
+.evening {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-nighttime.jpg");
+  background-size: cover;
+}
+.evening .extra-details {
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(20.3871px);
+          backdrop-filter: blur(20.3871px);
+}
+.evening .extra-details p,
+.evening .extra-details h2 {
+  color: white;
+}
+.evening .extra-details .center-divider {
+  border-color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .evening {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/tablet/bg-image-nighttime.jpg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .evening {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/desktop/bg-image-nighttime.jpg");
+    background-size: cover;
+  }
+}
+
 /*===QUOTE BLOCK===*/
 .quote-block {
   display: flex;
@@ -211,6 +259,7 @@ body {
 }
 .quote-block button {
   width: 40px;
+  cursor: pointer;
 }
 .quote-block button img {
   width: 100%;
@@ -285,9 +334,20 @@ body {
   letter-spacing: 3px;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .timezone-block .expand-details-btn img {
-  rotate: 180deg;
+  transition-property: transform, rotate;
+  transition: 300ms ease;
+  transform: rotate(180deg);
+}
+.timezone-block .expand-details-btn.flip img {
+  transform: rotate(0deg);
+}
+@media screen and (min-width: 1024px) {
+  .timezone-block .expand-details-btn:hover img {
+    opacity: 0.75;
+  }
 }
 @media screen and (min-width: 768px) {
   .timezone-block .timezone-details .greetings-message {
@@ -333,6 +393,7 @@ body {
   background: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(20.3871px);
           backdrop-filter: blur(20.3871px);
+  transition: transform 400ms ease-in-out;
 }
 .extra-details .wrapper {
   padding: 4rem 1.5rem;
