@@ -191,6 +191,11 @@ body {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-daytime.jpg");
   background-size: cover;
 }
+.morning .extra-details {
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(20.3871px);
+          backdrop-filter: blur(20.3871px);
+}
 @media screen and (min-width: 768px) {
   .morning {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/tablet/bg-image-daytime.jpg");
@@ -199,6 +204,34 @@ body {
 @media screen and (min-width: 1024px) {
   .morning {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/desktop/bg-image-daytime.jpg");
+    background-size: cover;
+  }
+}
+
+.evening {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/mobile/bg-image-nighttime.jpg");
+  background-size: cover;
+}
+.evening .extra-details {
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(20.3871px);
+          backdrop-filter: blur(20.3871px);
+}
+.evening .extra-details p,
+.evening .extra-details h2 {
+  color: white;
+}
+.evening .extra-details .center-divider {
+  border-color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .evening {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/tablet/bg-image-nighttime.jpg");
+  }
+}
+@media screen and (min-width: 1024px) {
+  .evening {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/desktop/bg-image-nighttime.jpg");
     background-size: cover;
   }
 }
