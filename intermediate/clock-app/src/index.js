@@ -39,7 +39,7 @@ async function fetchIpDetails() {
 
 async function getWorldData() {
   const response = await fetch(
-    `http://worldtimeapi.org/api/timezone/${timezoneID}`
+    `https://worldtimeapi.org/api/timezone/${timezoneID}`
   );
   const data = await response.json();
 
