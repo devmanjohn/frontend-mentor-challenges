@@ -1,11 +1,13 @@
+import AboutSection from '@/components/AboutSection';
 import PrimaryBtn from '@/components/utils/PrimaryBtn';
+import SecondaryBtn from '@/components/utils/SecondaryBtn';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <main>
       {/* Landing Section */}
-      <section>
+      <section className='mt-4'>
         <div className='custom-container'>
           <figure className='relative h-[271px] md:h-[600px]'>
             <Image
@@ -56,11 +58,14 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section id='about-me'>
+      <AboutSection />
+
+      {/* CTA Section */}
+      <section>
         <div className='custom-container'>
-          <figure>
-            <Image />
-          </figure>
+          <h3>Interested in doing a proejct together?</h3>
+          <hr className='hidden md:block' />
+          <SecondaryBtn>Contact Me</SecondaryBtn>
         </div>
       </section>
     </main>

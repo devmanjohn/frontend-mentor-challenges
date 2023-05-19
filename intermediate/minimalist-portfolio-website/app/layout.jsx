@@ -1,5 +1,6 @@
 'use client';
 
+import Footer from '@/components/Footer';
 // Imports
 import './globals.scss';
 
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
