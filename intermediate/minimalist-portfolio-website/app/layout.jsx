@@ -1,5 +1,10 @@
-import Header from '@/components/Header';
+'use client';
+
+// Imports
 import './globals.scss';
+
+// Components
+import Header from '@/components/Header';
 
 export const metadata = {
   title: 'Minimalist Portfolio Website | Frontend Mentor Challenge',

@@ -1,8 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
+
 import { useState } from 'react';
+import NavLink from './utils/NavLink';
+import Link from 'next/link';
 
 function Header() {
   const [isNavClosed, setIsNavClosed] = useState(true);
@@ -17,10 +19,10 @@ function Header() {
           height={32}
         />
       </Link>
-      <nav className='hidden md:flex uppercase gap-10 tracking-[2px]'>
-        <Link href='/'>Home</Link>
-        <Link href='/portfolio'>Portfolio</Link>
-        <Link href='/contact'>Contact Me</Link>
+      <nav className='hidden md:flex gap-10 '>
+        <NavLink href='/'>Home</NavLink>
+        <NavLink href='/portfolio'>Portfolio</NavLink>
+        <NavLink href='/contact'>Contact Me</NavLink>
       </nav>
 
       <button
@@ -49,9 +51,9 @@ function Header() {
           isNavClosed ? 'h-[0px]' : 'h-[186px]'
         }`}
       >
-        <Link href='/'>Home</Link>
-        <Link href='/portfolio'>Portfolio</Link>
-        <Link href='/contact'>Contact Me</Link>
+        <NavLink href='/'>Home</NavLink>
+        <NavLink href='/portfolio'>Portfolio</NavLink>
+        <NavLink href='/contact'>Contact Me</NavLink>
       </nav>
     </header>
   );
