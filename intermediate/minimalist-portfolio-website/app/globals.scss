@@ -13,3 +13,18 @@ body {
   max-width: 1110px;
   margin-inline: auto;
 }
+
+.custom-hover-effect {
+  a {
+    transition: opacity 300ms ease;
+  }
+
+  &:hover {
+    a {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}

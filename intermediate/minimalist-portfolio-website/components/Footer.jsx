@@ -7,19 +7,21 @@ function Footer() {
   return (
     <footer>
       {/* CTA Block */}
-      <section className='mt-20'>
-        <div className='custom-container text-center'>
-          <h3 className='text-grayish-dark-blue font-ibarra font-bold text-[40px] leading-[42px]'>
+      <section className='mt-28'>
+        <div className='custom-container text-center md:flex gap-10 md:items-center md:text-left'>
+          <h3 className='text-grayish-dark-blue font-ibarra font-bold text-[40px] leading-[42px] max-w-[350px] mx-auto md:mx-0'>
             Interested in doing a proejct together?
           </h3>
-          <hr className='hidden md:block' />
-          <SecondaryBtn classes={'mt-10'}>Contact Me</SecondaryBtn>
+          <hr className='hidden w-[113px] md:block lg:w-[520px]' />
+          <SecondaryBtn classes={'mt-10 md:mt-0 md:ml-auto'}>
+            Contact Me
+          </SecondaryBtn>
         </div>
       </section>
 
       {/* Main Footer */}
-      <section className='bg-grayish-dark-blue text-white py-14 mt-20'>
-        <div className='custom-container flex items-center flex-col gap-12'>
+      <section className='bg-grayish-dark-blue text-white py-14 mt-24 md:py-8'>
+        <div className='custom-container flex items-center flex-col gap-12 md:flex-row'>
           {/* Logo */}
           <svg xmlns='http://www.w3.org/2000/svg' width='61' height='32'>
             <path
@@ -30,22 +32,28 @@ function Footer() {
           </svg>
 
           {/* Navigation */}
-          <nav className='flex flex-col text-center gap-6'>
-            <Link href='/' className='uppercase text-sm tracking-[2px]'>
+          <nav className='flex flex-col text-center gap-6 md:flex-row custom-hover-effect'>
+            <Link
+              href='/'
+              className='uppercase text-sm tracking-[2px] hover:opacity-100'
+            >
               Home
             </Link>
             <Link
               href='/portfolio'
-              className='uppercase text-sm tracking-[2px]'
+              className='uppercase text-sm tracking-[2px] hover:opacity-100'
             >
               Portfolio
             </Link>
-            <Link href='/contact' className='uppercase text-sm tracking-[2px]'>
+            <Link
+              href='/contact'
+              className='uppercase text-sm tracking-[2px] hover:opacity-100'
+            >
               Contact
             </Link>
           </nav>
 
-          <div className='flex items-center gap-4'>
+          <div className='flex items-center gap-4 md:ml-auto custom-hover-effect'>
             <a href='https://github.com/' target='_blank' aria-label='GitHub'>
               <svg xmlns='http://www.w3.org/2000/svg' width='25' height='24'>
                 <path
