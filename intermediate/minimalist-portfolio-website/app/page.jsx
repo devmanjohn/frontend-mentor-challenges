@@ -4,13 +4,13 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main>
-      {/* Landing */}
+      {/* Landing Section */}
       <section>
         <div className='custom-container'>
           <figure className='relative h-[271px] md:h-[600px]'>
             <Image
               className='md:hidden object-cover'
-              src='/assets/images/homepage/mobile/image-homepage-hero.jpg'
+              src='/assets/images/homepage/mobile/image-homepage-hero@2x.jpg'
               alt=''
               fill={true}
               priority={true}
@@ -18,7 +18,7 @@ export default function Home() {
 
             <Image
               className='hidden md:block xl:hidden object-cover'
-              src='/assets/images/homepage/desktop/image-homepage-hero.jpg'
+              src='/assets/images/homepage/desktop/image-homepage-hero@2x.jpg'
               alt=''
               fill={true}
               priority={true}
@@ -26,7 +26,7 @@ export default function Home() {
 
             <Image
               className='hidden md:hidden xl:block object-cover'
-              src='/assets/images/homepage/desktop/image-homepage-hero.jpg'
+              src='/assets/images/homepage/desktop/image-homepage-hero@2x.jpg'
               alt=''
               fill={true}
               priority={true}
@@ -43,7 +43,7 @@ export default function Home() {
             </div>
           </figure>
 
-          <div className='md:hidden'>
+          <div className='md:hidden mt-6'>
             <h1 className='font-ibarra font-bold text-grayish-dark-blue text-[40px] leading-[42px]'>
               Hey, I'm Alex Spencer and I love building beautiful websites
             </h1>
@@ -52,6 +52,15 @@ export default function Home() {
               About Me
             </PrimaryBtn>
           </div>
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section id='about-me'>
+        <div className='custom-container'>
+          <figure>
+            <Image />
+          </figure>
         </div>
       </section>
     </main>
