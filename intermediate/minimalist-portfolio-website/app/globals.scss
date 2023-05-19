@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Public Sans', 'sans-serif';
+}
+
+.custom-width {
+  width: calc(100% - 4rem);
+  max-width: 1111px;
+  margin-inline: auto;
+}
