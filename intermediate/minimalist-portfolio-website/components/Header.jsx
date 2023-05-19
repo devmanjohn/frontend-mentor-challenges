@@ -14,7 +14,7 @@ function Header() {
   const [isNavClosed, setIsNavClosed] = useState(true);
 
   return (
-    <header className='custom-width py-6 border-b flex items-center justify-between relative md:border-0 md:py-14 '>
+    <header className='custom-container py-6 border-b flex items-center justify-between relative md:border-0 md:py-14 '>
       {/* Logo */}
       <Link href='/'>
         <Image

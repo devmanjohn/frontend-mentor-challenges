@@ -1,7 +1,10 @@
 export default function Home() {
   return (
     <main>
-      <p>Home</p>
+      {/* Landing */}
+      <section>
+        <div className='custom-container'></div>
+      </section>
     </main>
   );
 }
