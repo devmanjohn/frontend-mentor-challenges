@@ -1,7 +1,8 @@
+import Image from 'next/image';
+
+// Components
 import AboutSection from '@/components/AboutSection';
 import PrimaryBtn from '@/components/utils/PrimaryBtn';
-import SecondaryBtn from '@/components/utils/SecondaryBtn';
-import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -61,13 +62,6 @@ export default function Home() {
       <AboutSection />
 
       {/* CTA Section */}
-      <section>
-        <div className='custom-container'>
-          <h3>Interested in doing a proejct together?</h3>
-          <hr className='hidden md:block' />
-          <SecondaryBtn>Contact Me</SecondaryBtn>
-        </div>
-      </section>
     </main>
   );
 }
