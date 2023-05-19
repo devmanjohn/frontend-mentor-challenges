@@ -6,7 +6,7 @@ import PrimaryBtn from '@/components/utils/PrimaryBtn';
 
 export default function Home() {
   return (
-    <main>
+    <main className='flex-grow'>
       {/* Landing Section */}
       <section className='mt-4'>
         <div className='custom-container'>

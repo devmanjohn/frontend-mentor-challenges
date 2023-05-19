@@ -1,5 +1,5 @@
 function Portfolio() {
-  return <main>Portfolio</main>;
+  return <main className='flex-grow'>Portfolio</main>;
 }
 
 export default Portfolio;

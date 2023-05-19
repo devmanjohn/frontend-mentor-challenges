@@ -1,5 +1,5 @@
 function Contact() {
-  return <main>Contact</main>;
+  return <main className='flex-grow'>Contact</main>;
 }
 
 export default Contact;
