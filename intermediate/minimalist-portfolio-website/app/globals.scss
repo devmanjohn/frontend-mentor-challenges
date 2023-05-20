@@ -28,3 +28,33 @@ body {
     }
   }
 }
+
+@layer components {
+  .custom-input-styles {
+    @apply w-full border block px-4 py-3 mt-3 bg-[#E6E6E7];
+
+    &::placeholder {
+      @apply opacity-40 text-grayish-dark-blue;
+    }
+
+    &:focus {
+      @apply outline-slightly-desaturated-cyan;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+
+    &:invalid {
+      @apply outline-bright-red;
+
+      & + span {
+        visibility: visible;
+      }
+    }
+
+    &:valid {
+      & + span {
+        visibility: none;
+      }
+    }
+  }
+}
