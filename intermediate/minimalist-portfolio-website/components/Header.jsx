@@ -16,6 +16,7 @@ function Header() {
   const headerRef = useRef(null);
 
   useEffect(() => {
+    // Animate Links
     let ctx = gsap.context(() => {
       let headerTl = gsap
         .timeline()
@@ -27,6 +28,7 @@ function Header() {
         );
     });
 
+    // Animate Header on Scroll
     const header = headerRef.current;
     let previousScroll = window.pageYOffset;
     let isHeaderVisible = true;

@@ -7,7 +7,8 @@ function AboutSection() {
     <section id='about-me' className='mt-20 md:mt-32'>
       <div className='custom-container md:grid md:grid-cols-2 gap-20'>
         {/* Profile Picture */}
-        <figure className='relative h-[346px] md:h-[600px]'>
+        <figure className='profile-picture relative h-[346px] md:h-[600px]'>
+          <span className='animation-span w-0 h-full absolute top-0 left-0 bg-white block z-10'></span>
           <Image
             className='md:hidden object-cover'
             src='/assets/images/homepage/mobile/image-homepage-profile@2x.jpg'
