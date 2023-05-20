@@ -14,7 +14,7 @@ function Contact() {
 
           {/* Right Container */}
           <div>
-            <p className='mt-4 leading-[30px] text-grayish-dark-blue text-[15px]'>
+            <p className='mt-4 leading-[30px] text-grayish-dark-blue text-[15px] opacity-80'>
               I'd love to hear about what you're working on and how I could
               help. I'm currently looking for a new role and am open to a wide
               range of opportunities. My preference would be to find a position
