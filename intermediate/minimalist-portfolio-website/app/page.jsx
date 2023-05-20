@@ -46,7 +46,6 @@ export default function Home() {
         {
           scrollTrigger: {
             trigger: '#about-me',
-            markers: true,
             start: 'top 50%+=150px',
           },
           width: 0,
