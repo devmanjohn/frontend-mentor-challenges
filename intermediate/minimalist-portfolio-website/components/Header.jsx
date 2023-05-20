@@ -6,13 +6,14 @@ import Image from 'next/image';
 import { gsap } from 'gsap';
 
 // State
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 // Components
 import NavLink from './utils/NavLink';
 
 function Header() {
   const [isNavClosed, setIsNavClosed] = useState(true);
+  const headerRef = useRef(null);
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -25,10 +26,45 @@ function Header() {
           '<'
         );
     });
+
+    const header = headerRef.current;
+    let previousScroll = window.pageYOffset;
+    let isHeaderVisible = true;
+
+    const handleScroll = () => {
+      const currentScroll = window.pageYOffset;
+      const scrollDirection = currentScroll > previousScroll ? 'down' : 'up';
+
+      if (scrollDirection === 'down' && isHeaderVisible) {
+        gsap.to(header, {
+          top: -header.offsetHeight,
+          duration: 0.3,
+          ease: 'power1.out',
+        });
+        isHeaderVisible = false;
+      } else if (scrollDirection === 'up' && !isHeaderVisible) {
+        gsap.to(header, {
+          top: 0,
+          duration: 0.3,
+          ease: 'power1.out',
+        });
+        isHeaderVisible = true;
+      }
+
+      previousScroll = currentScroll;
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   return (
-    <header className='custom-container py-6 flex items-center justify-between relative md:py-14'>
+    <header
+      ref={headerRef}
+      className='custom-container py-6 flex items-center justify-between md:py-14 z-10 sticky bg-white'
+    >
       {/* Logo */}
       <Link className='logo' href='/'>
         <Image
