@@ -6,7 +6,7 @@ function NavLink({ children, href }) {
 
   return (
     <Link
-      className={`uppercase tracking-[2px] hover:opacity-50 transition-opacity
+      className={`nav-link uppercase tracking-[2px] hover:opacity-50 transition-opacity
       ${pathname === href ? 'text-slightly-desaturated-cyan' : ''}  `}
       href={`${href}`}
     >
