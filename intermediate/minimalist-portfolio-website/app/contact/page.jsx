@@ -4,7 +4,7 @@ function Contact() {
   return (
     <main className='flex-grow'>
       <div className='custom-container'>
-        <section className='border-t border-b pt-8 pb-8'>
+        <section className='border-t border-b py-8 lg:grid lg:grid-cols-2 lg:py-14'>
           {/* Left Container */}
           <div>
             <h1 className='font-bold font-ibarra text-[40px] text-grayish-dark-blue'>
@@ -14,7 +14,7 @@ function Contact() {
 
           {/* Right Container */}
           <div>
-            <p className='mt-4 leading-[30px] text-grayish-dark-blue text-[15px] opacity-80'>
+            <p className='mt-4 leading-[30px] text-grayish-dark-blue opacity-80 lg:mt-0'>
               I'd love to hear about what you're working on and how I could
               help. I'm currently looking for a new role and am open to a wide
               range of opportunities. My preference would be to find a position
@@ -65,7 +65,7 @@ function Contact() {
           </div>
         </section>
 
-        <section className='mt-4'>
+        <section className='mt-4 lg:grid lg:grid-cols-2 lg:pt-14'>
           <h2 className='font-bold font-ibarra text-[40px] text-grayish-dark-blue'>
             Contact Me
           </h2>

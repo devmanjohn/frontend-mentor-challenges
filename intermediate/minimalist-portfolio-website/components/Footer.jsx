@@ -1,23 +1,30 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 // Components
 import SecondaryBtn from './utils/SecondaryBtn';
 
 function Footer() {
+  const pathname = usePathname();
+  console.log(pathname);
   return (
     <footer>
       {/* CTA Block */}
-      <section className='mt-28'>
-        <div className='custom-container text-center md:flex gap-10 md:items-center md:text-left'>
-          <h3 className='text-grayish-dark-blue font-ibarra font-bold text-[40px] leading-[42px] max-w-[350px] mx-auto md:mx-0'>
-            Interested in doing a proejct together?
-          </h3>
-          <hr className='hidden w-[113px] md:block lg:w-[520px]' />
-          <SecondaryBtn classes={'mt-10 md:mt-0 md:ml-auto'}>
-            Contact Me
-          </SecondaryBtn>
-        </div>
-      </section>
+      {pathname !== '/contact' && (
+        <section className='mt-28'>
+          <div className='custom-container text-center md:flex gap-10 md:items-center md:text-left'>
+            <h3 className='text-grayish-dark-blue font-ibarra font-bold text-[40px] leading-[42px] max-w-[350px] mx-auto md:mx-0'>
+              Interested in doing a proejct together?
+            </h3>
+            <hr className='hidden w-[113px] md:block lg:w-[520px]' />
+            <SecondaryBtn classes={'mt-10 md:mt-0 md:ml-auto'}>
+              Contact Me
+            </SecondaryBtn>
+          </div>
+        </section>
+      )}
 
       {/* Main Footer */}
       <section className='bg-grayish-dark-blue text-white py-14 mt-24 md:py-8'>

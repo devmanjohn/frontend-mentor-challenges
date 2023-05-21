@@ -17,7 +17,7 @@ function ContactForm() {
   const isFieldTouched = (fieldName) => touchedFields.includes(fieldName);
 
   return (
-    <form className='mt-8 flex flex-col gap-8' action=''>
+    <form className='mt-8 flex flex-col gap-8 lg:mt-0' action=''>
       <div>
         <label
           className='font-bold text-grayish-dark-blue opacity-80'
@@ -93,6 +93,10 @@ function ContactForm() {
           </span>
         )}
       </div>
+
+      <button className='bg-dark-blue text-white p-4 px-10 w-fit uppercase tracking-[2px] text-sm'>
+        Send Message
+      </button>
     </form>
   );
 }
