@@ -1,5 +1,3 @@
-'use client';
-
 import Footer from '@/components/Footer';
 // Imports
 import './globals.scss';
