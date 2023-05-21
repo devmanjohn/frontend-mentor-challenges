@@ -49,7 +49,7 @@ function AboutSection() {
             for a walk, run or cycling. I'd love you to check out my work.
           </p>
 
-          <SecondaryBtn classes='mt-4 mb-10 lg:mt-8'>
+          <SecondaryBtn href='/portfolio' classes='mt-4 mb-10 lg:mt-8'>
             Go to portfolio
           </SecondaryBtn>
         </div>
