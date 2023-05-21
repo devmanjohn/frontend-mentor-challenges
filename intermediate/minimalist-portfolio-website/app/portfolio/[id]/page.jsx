@@ -4,6 +4,9 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
+// Animation
+import { gsap } from 'gsap';
+
 // Components
 import SecondaryBtn from '@/components/utils/SecondaryBtn';
 
@@ -19,8 +22,28 @@ function PortfolioShowcase({ params: { id } }) {
     setProject(data);
   };
 
+  const animateElements = () => {
+    const elements = document.querySelectorAll('*');
+
+    elements.forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.75,
+        }
+      );
+    });
+  };
+
   useEffect(() => {
     fetchProject();
+    animateElements();
+
+    return () => {
+      gsap.killTweensOf('*');
+    };
   }, []);
 
   return (

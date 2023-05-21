@@ -16,7 +16,7 @@ function Footer() {
         <section className='mt-28'>
           <div className='custom-container text-center md:flex gap-10 md:items-center md:text-left'>
             <h3 className='text-grayish-dark-blue font-ibarra font-bold text-[40px] leading-[42px] max-w-[350px] mx-auto md:mx-0'>
-              Interested in doing a proejct together?
+              Interested in doing a project together?
             </h3>
             <hr className='hidden w-[113px] md:block lg:w-[520px]' />
             <SecondaryBtn classes={'mt-10 md:mt-0 md:ml-auto'}>

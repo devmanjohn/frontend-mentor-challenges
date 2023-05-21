@@ -1,6 +1,40 @@
+'use client';
+
+// Imports
+import { useEffect } from 'react';
+
+// Animation
+import gsap from 'gsap';
+
+// Components
 import ContactForm from '@/components/ContactForm';
 
 function Contact() {
+  const animateElements = () => {
+    const elements = document.querySelectorAll('*');
+
+    elements.forEach((element) => {
+      {
+        gsap.fromTo(
+          element,
+          { opacity: 0 },
+          {
+            opacity: 1,
+            duration: 0.75,
+          }
+        );
+      }
+    });
+  };
+
+  useEffect(() => {
+    animateElements();
+
+    return () => {
+      gsap.killTweensOf('*');
+    };
+  }, []);
+
   return (
     <main className='flex-grow'>
       <div className='custom-container'>
