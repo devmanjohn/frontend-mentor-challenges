@@ -57,4 +57,19 @@ body {
       }
     }
   }
+
+  .custom-grid-layout {
+    @apply grid gap-16;
+    .project-card {
+      &:nth-child(even) {
+        @apply grid-flow-dense;
+        figure {
+          @apply col-start-2;
+        }
+        div {
+          @apply col-start-1;
+        }
+      }
+    }
+  }
 }
