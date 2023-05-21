@@ -22,7 +22,7 @@ export default function Home() {
         .fromTo(
           '.hero-figure .animation-span',
           { width: '100%' },
-          { width: 0, duration: 1, delay: 1 }
+          { width: 0, duration: 1, delay: 0.3 }
         )
         .fromTo(
           '.hero-content',
@@ -111,8 +111,6 @@ export default function Home() {
 
       {/* About Me Section */}
       <AboutSection />
-
-      {/* CTA Section */}
     </main>
   );
 }
