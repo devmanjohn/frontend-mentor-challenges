@@ -8,7 +8,7 @@ import SecondaryBtn from './utils/SecondaryBtn';
 
 function Footer() {
   const pathname = usePathname();
-  console.log(pathname);
+
   return (
     <footer>
       {/* CTA Block */}
@@ -19,7 +19,7 @@ function Footer() {
               Interested in doing a project together?
             </h3>
             <hr className='hidden w-[113px] md:block lg:w-[520px]' />
-            <SecondaryBtn classes={'mt-10 md:mt-0 md:ml-auto'}>
+            <SecondaryBtn href='/contact' classes={'mt-10 md:mt-0 md:ml-auto'}>
               Contact Me
             </SecondaryBtn>
           </div>
