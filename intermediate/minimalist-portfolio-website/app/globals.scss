@@ -62,7 +62,7 @@ body {
     @apply grid gap-16;
     .project-card {
       &:nth-child(even) {
-        @apply grid-flow-dense;
+        @apply grid-flow-dense lg:translate-x-10;
         figure {
           @apply col-start-2;
         }

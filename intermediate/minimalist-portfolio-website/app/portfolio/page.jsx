@@ -7,6 +7,8 @@ function Portfolio() {
       <section className='custom-container custom-grid-layout'>
         <ProjectCard />
         <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
       </section>
     </main>
   );
