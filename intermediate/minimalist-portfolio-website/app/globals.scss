@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Public Sans', 'sans-serif';
+}
+
+.custom-container {
+  width: calc(100% - 3.5rem);
+  max-width: 1110px;
+  margin-inline: auto;
+}
+
+.custom-hover-effect {
+  a {
+    transition: opacity 300ms ease;
+  }
+
+  &:hover {
+    a {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@layer components {
+  .custom-input-styles {
+    @apply w-full border block px-4 py-3 mt-3 bg-[#E6E6E7];
+
+    &::placeholder {
+      @apply opacity-40 text-grayish-dark-blue;
+    }
+
+    &:focus {
+      @apply outline-slightly-desaturated-cyan;
+      outline-style: solid;
+      outline-width: 2px;
+    }
+
+    &:invalid {
+      @apply outline-bright-red;
+
+      & + span {
+        visibility: visible;
+      }
+    }
+
+    &:valid {
+      & + span {
+        visibility: none;
+      }
+    }
+  }
+
+  .custom-grid-layout {
+    @apply grid gap-16;
+    .project-card {
+      &:nth-child(even) {
+        @apply grid-flow-dense lg:translate-x-10;
+        figure {
+          @apply col-start-2;
+        }
+        div {
+          @apply col-start-1;
+        }
+      }
+    }
+  }
+}
