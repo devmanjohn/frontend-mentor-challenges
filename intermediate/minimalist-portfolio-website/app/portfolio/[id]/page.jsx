@@ -1,7 +1,28 @@
-import SecondaryBtn from '@/components/utils/SecondaryBtn';
-import Image from 'next/image';
+'use client';
 
-function PortfolioShowcase() {
+// Imports
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
+
+// Components
+import SecondaryBtn from '@/components/utils/SecondaryBtn';
+
+function PortfolioShowcase({ params: { id } }) {
+  const [project, setProject] = useState([]);
+
+  const fetchProject = async () => {
+    const res = await fetch(
+      `https://my-json-server.typicode.com/devmanjohn/portfolio-projects-data/projects/${id}`
+    );
+    const data = await res.json();
+
+    setProject(data);
+  };
+
+  useEffect(() => {
+    fetchProject();
+  }, []);
+
   return (
     <main className='flex-grow'>
       <section className='custom-container mt-8'>
@@ -9,21 +30,21 @@ function PortfolioShowcase() {
         <figure className=' relative h-[140px] md:h-[310px] lg:h-[500px]'>
           <Image
             className='md:hidden object-cover'
-            src='/assets/images/detail/mobile/image-manage-hero@2x.jpg'
+            src={`/assets/images/detail/mobile/${project?.projectHero}`}
             alt=''
             fill={true}
           />
 
           <Image
             className='hidden md:block xl:hidden object-cover'
-            src='/assets/images/detail/tablet/image-manage-hero@2x.jpg'
+            src={`/assets/images/detail/tablet/${project?.projectHero}`}
             alt=''
             fill={true}
           />
 
           <Image
             className='hidden md:hidden xl:block object-cover'
-            src='/assets/images/detail/desktop/image-manage-hero@2x.jpg'
+            src={`/assets/images/detail/desktop/${project?.projectHero}`}
             alt=''
             fill={true}
           />
@@ -34,15 +55,12 @@ function PortfolioShowcase() {
           <aside className='border-t border-b mt-8 py-4 md:flex md:flex-wrap md:py-10 lg:flex-col lg:max-w-[380px] lg:h-fit'>
             {/* Title */}
             <h1 className='text-grayish-dark-blue font-bold font-ibarra text-[40px] md:w-1/2 lg:w-full'>
-              Manage
+              {project?.title}
             </h1>
 
             {/* Details */}
             <p className='mt-4 opacity-80 leading-[30px] md:w-1/2 lg:w-full'>
-              This project required me to build a fully responsive landing page
-              to the designs provided. I used HTML5, along with CSS Grid and
-              JavaScript for the areas that required interactivity, such as the
-              testimonial slider.
+              {project?.shortDescription}
             </p>
 
             <div className='mt-8 md:-mt-20 lg:mt-8'>
@@ -53,7 +71,7 @@ function PortfolioShowcase() {
 
               {/* Technology Stack */}
               <p className='text-slightly-desaturated-cyan text-sm font-bold mt-4 lg:text-base'>
-                HTML / CSS / JS
+                {project?.technologyUsed}
               </p>
               <SecondaryBtn classes={'mt-4'} href='/'>
                 Visit Website
@@ -68,14 +86,7 @@ function PortfolioShowcase() {
             </h2>
             {/* Background */}
             <p className='mt-4 opacity-80 leading-[30px]'>
-              This project was a front-end challenge from Frontend Mentor. It's
-              a platform that enables you to practice building websites to a
-              design and project brief. Each challenge includes mobile and
-              desktop designs to show how the website should look at different
-              screen sizes. Creating these projects has helped me refine my
-              workflow and solve real-world coding problems. I've learned
-              something new with each project, helping me to improve and adapt
-              my style.
+              {project?.projectBackground}
             </p>
 
             {/* Previews */}
@@ -87,21 +98,21 @@ function PortfolioShowcase() {
               <figure className='relative w-full h-[200px] md:h-[434px] xl:h-[400px]'>
                 <Image
                   className='md:hidden object-cover'
-                  src='/assets/images/detail/mobile/image-manage-preview-1@2x.jpg'
+                  src={`/assets/images/detail/mobile/${project?.previewImage1}`}
                   alt=''
                   fill={true}
                 />
 
                 <Image
                   className='hidden md:block object-cover'
-                  src='/assets/images/detail/tablet/image-manage-preview-1@2x.jpg'
+                  src={`/assets/images/detail/tablet/${project?.previewImage1}`}
                   alt=''
                   fill={true}
                 />
 
                 <Image
                   className='hidden xl:block object-cover'
-                  src='/assets/images/detail/desktop/image-manage-preview-1@2x.jpg'
+                  src={`/assets/images/detail/desktop/${project?.previewImage1}`}
                   alt=''
                   fill={true}
                 />
@@ -111,21 +122,21 @@ function PortfolioShowcase() {
               <figure className='relative w-full h-[200px] md:h-[434px] xl:h-[400px]'>
                 <Image
                   className='md:hidden object-cover'
-                  src='/assets/images/detail/mobile/image-manage-preview-2@2x.jpg'
+                  src={`/assets/images/detail/mobile/${project?.previewImage2}`}
                   alt=''
                   fill={true}
                 />
 
                 <Image
                   className='hidden md:block object-cover'
-                  src='/assets/images/detail/tablet/image-manage-preview-2@2x.jpg'
+                  src={`/assets/images/detail/tablet/${project?.previewImage2}`}
                   alt=''
                   fill={true}
                 />
 
                 <Image
                   className='hidden xl:block object-cover'
-                  src='/assets/images/detail/desktop/image-manage-preview-2@2x.jpg'
+                  src={`/assets/images/detail/desktop/${project?.previewImage2}`}
                   alt=''
                   fill={true}
                 />
