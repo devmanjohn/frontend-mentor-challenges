@@ -3,6 +3,7 @@
 // Imports
 import Image from 'next/image';
 import { useEffect } from 'react';
+import Head from 'next/head';
 
 // Animation
 import { gsap } from 'gsap';
@@ -56,61 +57,67 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='flex-grow'>
-      {/* Landing Section */}
-      <section className='mt-4'>
-        <div className='custom-container'>
-          <figure className='hero-figure relative h-[271px] md:h-[600px] overflow-hidden'>
-            <span className='animation-span w-0 h-full absolute top-0 left-0 bg-white block z-10'></span>
-            <Image
-              className='md:hidden object-cover'
-              src='/assets/images/homepage/mobile/image-homepage-hero@2x.jpg'
-              alt=''
-              fill={true}
-              priority={true}
-            />
+    <>
+      <Head>
+        <title>my page title</title>
+        <meta property='og:title' content='my new title' key='title' />
+      </Head>
+      <main className='flex-grow'>
+        {/* Landing Section */}
+        <section className='mt-4'>
+          <div className='custom-container'>
+            <figure className='hero-figure relative h-[271px] md:h-[600px] overflow-hidden'>
+              <span className='animation-span w-0 h-full absolute top-0 left-0 bg-white block z-10'></span>
+              <Image
+                className='md:hidden object-cover'
+                src='/assets/images/homepage/mobile/image-homepage-hero@2x.jpg'
+                alt=''
+                fill={true}
+                priority={true}
+              />
 
-            <Image
-              className='hidden md:block xl:hidden object-cover'
-              src='/assets/images/homepage/desktop/image-homepage-hero@2x.jpg'
-              alt=''
-              fill={true}
-              priority={true}
-            />
+              <Image
+                className='hidden md:block xl:hidden object-cover'
+                src='/assets/images/homepage/desktop/image-homepage-hero@2x.jpg'
+                alt=''
+                fill={true}
+                priority={true}
+              />
 
-            <Image
-              className='hidden md:hidden xl:block object-cover'
-              src='/assets/images/homepage/desktop/image-homepage-hero@2x.jpg'
-              alt=''
-              fill={true}
-              priority={true}
-            />
+              <Image
+                className='hidden md:hidden xl:block object-cover'
+                src='/assets/images/homepage/desktop/image-homepage-hero@2x.jpg'
+                alt=''
+                fill={true}
+                priority={true}
+              />
 
-            <div className='hero-content hidden md:block absolute bottom-0 left-0 bg-white p-12 pl-0 pb-0 max-w-[514px] lg:max-w-[445px]'>
-              <h1 className='font-ibarra font-bold text-grayish-dark-blue text-[40px] leading-[42px] lg:text-[50px] lg:leading-[50px]'>
+              <div className='hero-content hidden md:block absolute bottom-0 left-0 bg-white p-12 pl-0 pb-0 max-w-[514px] lg:max-w-[445px]'>
+                <h1 className='font-ibarra font-bold text-grayish-dark-blue text-[40px] leading-[42px] lg:text-[50px] lg:leading-[50px]'>
+                  Hey, I'm Alex Spencer and I love building beautiful websites
+                </h1>
+
+                <PrimaryBtn href={'#about-me'} classes={'mt-8 lg:mt-12'}>
+                  About Me
+                </PrimaryBtn>
+              </div>
+            </figure>
+
+            <div className='md:hidden mt-6'>
+              <h1 className='font-ibarra font-bold text-grayish-dark-blue text-[40px] leading-[42px]'>
                 Hey, I'm Alex Spencer and I love building beautiful websites
               </h1>
 
-              <PrimaryBtn href={'#about-me'} classes={'mt-8 lg:mt-12'}>
+              <PrimaryBtn href={'#about-me'} classes={'mt-6'}>
                 About Me
               </PrimaryBtn>
             </div>
-          </figure>
-
-          <div className='md:hidden mt-6'>
-            <h1 className='font-ibarra font-bold text-grayish-dark-blue text-[40px] leading-[42px]'>
-              Hey, I'm Alex Spencer and I love building beautiful websites
-            </h1>
-
-            <PrimaryBtn href={'#about-me'} classes={'mt-6'}>
-              About Me
-            </PrimaryBtn>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* About Me Section */}
-      <AboutSection />
-    </main>
+        {/* About Me Section */}
+        <AboutSection />
+      </main>
+    </>
   );
 }
