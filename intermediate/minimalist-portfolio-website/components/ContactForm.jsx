@@ -17,7 +17,11 @@ function ContactForm() {
   const isFieldTouched = (fieldName) => touchedFields.includes(fieldName);
 
   return (
-    <form className='mt-8 flex flex-col gap-8 lg:mt-0' action=''>
+    <form
+      className='mt-8 flex flex-col gap-8 lg:mt-0'
+      action='https://formspree.io/f/mzbqqbae'
+      method='POST'
+    >
       <div>
         <label
           className='font-bold text-grayish-dark-blue opacity-80'
