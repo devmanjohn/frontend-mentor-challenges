@@ -33,6 +33,7 @@ function PortfolioShowcase({ params: { id } }) {
             src={`/assets/images/detail/mobile/${project?.projectHero}`}
             alt=''
             fill={true}
+            priority={true}
           />
 
           <Image
@@ -40,6 +41,7 @@ function PortfolioShowcase({ params: { id } }) {
             src={`/assets/images/detail/tablet/${project?.projectHero}`}
             alt=''
             fill={true}
+            priority={true}
           />
 
           <Image
@@ -47,6 +49,7 @@ function PortfolioShowcase({ params: { id } }) {
             src={`/assets/images/detail/desktop/${project?.projectHero}`}
             alt=''
             fill={true}
+            priority={true}
           />
         </figure>
 

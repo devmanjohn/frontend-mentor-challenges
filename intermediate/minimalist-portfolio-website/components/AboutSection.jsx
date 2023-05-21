@@ -14,6 +14,7 @@ function AboutSection() {
             src='/assets/images/homepage/mobile/image-homepage-profile@2x.jpg'
             alt=''
             fill={true}
+            priority={true}
           />
 
           <Image
