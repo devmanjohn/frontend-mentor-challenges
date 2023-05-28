@@ -33,4 +33,8 @@
     @apply max-w-[1110px] mx-auto;
     width: calc(100% - 3rem);
   }
+
+  input:checked + .custom-toggle .custom-tack {
+    transform: translate(calc(200% - 4px), -50%);
+  }
 }
