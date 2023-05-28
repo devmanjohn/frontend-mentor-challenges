@@ -11,6 +11,24 @@
 }
 
 @layer components {
+  .header-bg {
+    background-image: url('/assets/mobile/bg-pattern-header.svg');
+    background-size: cover;
+    background-color: #5964e0;
+  }
+
+  @media screen and (min-width: 768px) {
+    .header-bg {
+      background-image: url('/assets/tablet/bg-pattern-header.svg');
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .header-bg {
+      background-image: url('/assets/desktop/bg-pattern-header.svg');
+    }
+  }
+
   .container {
     @apply max-w-[1110px] mx-auto;
     width: calc(100% - 3rem);
