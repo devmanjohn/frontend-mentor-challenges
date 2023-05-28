@@ -13,6 +13,6 @@
 @layer components {
   .container {
     @apply max-w-[1110px] mx-auto;
-    width: calc(100% - 1.5rem);
+    width: calc(100% - 3rem);
   }
 }
