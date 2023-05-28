@@ -9,3 +9,10 @@
 *::before {
   font-family: 'Kumbh Sans', sans-serif;
 }
+
+@layer components {
+  .container {
+    @apply max-w-[1110px] mx-auto;
+    width: calc(100% - 1.5rem);
+  }
+}
