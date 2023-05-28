@@ -1,7 +1,7 @@
 import React from 'react';
 
-function JobPage() {
-  return <div>JobPage</div>;
+function JobDetails() {
+  return <div>JobDetails</div>;
 }
 
-export default JobPage;
+export default JobDetails;
