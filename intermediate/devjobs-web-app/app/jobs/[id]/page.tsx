@@ -109,8 +109,8 @@ function JobDetails({ params }: JobTypes) {
               <p>{job.requirements.content}</p>
               {job.requirements.items && (
                 <ul className='list-disc list-outside ml-4'>
-                  {job.requirements.items.map((item) => {
-                    return <li className='mt-4 pl-4'>{item}</li>;
+                  {job.requirements.items.map((item, index) => {
+                    return <li key={index} className='mt-4 pl-4'>{item}</li>;
                   })}
                 </ul>
               )}
@@ -123,7 +123,7 @@ function JobDetails({ params }: JobTypes) {
                 <ol className='mt-4'>
                   {job.requirements.items.map((item, index) => {
                     return (
-                      <li className='flex gap-6 mt-4'>
+                      <li key={index} className='flex gap-6 mt-4'>
                         <span className='inline-block text-[#5964E0] font-bold'>
                           {++index}
                         </span>

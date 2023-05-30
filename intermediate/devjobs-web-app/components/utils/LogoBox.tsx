@@ -2,9 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 
 type LogoProps = {
-  company: String;
-  logo: String;
-  logoBackground: String;
+  company: string;
+  logo: string;
+  logoBackground: string;
 };
 
 function LogoBox({ logoBackground, company, logo }: LogoProps) {

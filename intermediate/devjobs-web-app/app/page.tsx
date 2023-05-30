@@ -7,7 +7,7 @@ function Home() {
   const router = useRouter();
   useEffect(() => {
     router.push('/jobs');
-  }, []);
+  }, [router]);
 }
 
 export default Home;

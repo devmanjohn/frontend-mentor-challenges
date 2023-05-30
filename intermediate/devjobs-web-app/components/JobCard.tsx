@@ -3,14 +3,14 @@ import LogoBox from './utils/LogoBox';
 import Link from 'next/link';
 
 type CardProps = {
-  id: Number;
-  company: String;
-  logo: String;
-  logoBackground: String;
-  postedAt: String;
-  location: String;
-  contract: String;
-  position: String;
+  id: number;
+  company: string;
+  logo: string;
+  logoBackground: string;
+  postedAt: string;
+  location: string;
+  contract: string;
+  position: string;
 };
 
 function JobCard({
