@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 type ThemeContextProps = {
   theme: string;
@@ -14,7 +14,21 @@ export const ThemeContextProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState(() => {
+    const storedTheme = localStorage.getItem('theme');
+    return storedTheme ?? 'light';
+  });
+
+  useEffect(() => {
+    if (localStorage.getItem('theme')) {
+      setTheme(localStorage.getItem('theme') as string);
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+
+    console.log(localStorage.getItem('theme'));
+    console.log(theme);
+  }, []);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>

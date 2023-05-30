@@ -16,6 +16,12 @@ function Header() {
       tag.classList.remove('dark');
     }
 
+    if (theme === 'light') {
+      localStorage.setItem('theme', 'light');
+    } else {
+      localStorage.setItem('theme', 'dark');
+    }
+
     tag?.classList.add(theme);
   }, [theme]);
 
@@ -43,6 +49,7 @@ function Header() {
               type='checkbox'
               name='theme-toggle'
               id='theme-toggle'
+              checked={theme === 'light' ? false : true}
               onChange={() => {
                 if (theme === 'light') {
                   setTheme('dark');
