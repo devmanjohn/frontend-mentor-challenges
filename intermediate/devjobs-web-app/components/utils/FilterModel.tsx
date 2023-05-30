@@ -37,7 +37,7 @@ function FilterModel({ setIsOpen, filters, setFilters }: FilterModelProps) {
         className='w-full h-screen fixed top-0 left-0 z-40'
       ></span>
 
-      <div className='container bg-white rounded relative z-50'>
+      <div className='container bg-white rounded relative z-50 dark:bg-[#19202D]'>
         {/* Location Input */}
         <div className='flex gap-4 p-6'>
           <svg width='20' height='24' xmlns='http://www.w3.org/2000/svg'>
@@ -48,7 +48,7 @@ function FilterModel({ setIsOpen, filters, setFilters }: FilterModelProps) {
             />
           </svg>
           <input
-            className='w-full focus-within:outline-none'
+            className='w-full focus-within:outline-none bg-[#19202D]'
             type='text'
             name='location'
             id='location'
@@ -74,7 +74,7 @@ function FilterModel({ setIsOpen, filters, setFilters }: FilterModelProps) {
                 setIsFulltime((prev) => !prev);
               }}
             />
-            <span className='w-[24px] h-[24px] bg-[#E8E8EA] rounded grid place-items-center'>
+            <span className='w-[24px] h-[24px] bg-[#E8E8EA] dark:bg-[#303742] rounded grid place-items-center'>
               <svg
                 className='text-white hidden'
                 width='15'
