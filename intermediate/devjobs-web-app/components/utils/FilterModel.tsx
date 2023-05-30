@@ -1,12 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function FilterModel() {
+type FilterModelProps = {
+  setIsOpen: (isFilterModelOpen: boolean) => void;
+  setFilters: (filters: {
+    position: string;
+    isFulltime: boolean;
+    location: string;
+  }) => void;
+  filters: {
+    position: string;
+    isFulltime: boolean;
+    location: string;
+  };
+};
+
+function FilterModel({ setIsOpen, filters, setFilters }: FilterModelProps) {
+  const [isFulltime, setIsFulltime] = useState(false);
+  const [location, setLocation] = useState('');
+
+  const handleSearch = () => {
+    setFilters({
+      ...filters,
+      isFulltime: isFulltime,
+      location: location,
+    });
+    setIsOpen(false);
+  };
+
   return (
     <div className='fixed z-50 left-0 top-0 w-full h-screen bg-[rgba(0,0,0,0.5)] grid place-items-center'>
       {/* Exit Zone */}
       <span
         onClick={() => {
-          console.log('exit');
+          setIsOpen(false);
         }}
         className='w-full h-screen fixed top-0 left-0 z-40'
       ></span>
@@ -27,6 +53,9 @@ function FilterModel() {
             name='location'
             id='location'
             placeholder='Filter by location...'
+            onChange={(e) => {
+              setLocation(e.target.value);
+            }}
           />
         </div>
 
@@ -40,6 +69,10 @@ function FilterModel() {
               type='checkbox'
               name='full-time'
               id='full-time'
+              checked={isFulltime}
+              onChange={() => {
+                setIsFulltime((prev) => !prev);
+              }}
             />
             <span className='w-[24px] h-[24px] bg-[#E8E8EA] rounded grid place-items-center'>
               <svg
@@ -61,6 +94,7 @@ function FilterModel() {
           </label>
 
           <button
+            onClick={handleSearch}
             className='bg-[#5964E0] text-white font-bold w-full py-3 rounded mt-8'
             type='button'
           >

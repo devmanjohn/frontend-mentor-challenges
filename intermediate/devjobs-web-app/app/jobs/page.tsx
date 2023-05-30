@@ -17,7 +17,11 @@ export default function Home() {
   const [jobsData, setJobsData] = useState<Job[]>();
   const [jobLimit, setJobLimit] = useState(12);
   const [totalDocs, setTotalDocs] = useState(0);
-  const [positionFilter, setPositionFilter] = useState('');
+  const [filters, setFilters] = useState({
+    position: '',
+    isFulltime: false,
+    location: '',
+  });
 
   // Query collection data for filters
   const q = query(collection(db, 'jobs'), limit(jobLimit));
@@ -41,16 +45,23 @@ export default function Home() {
   return (
     <main>
       <Filters
-        positionFilter={positionFilter}
-        setPositionFilter={setPositionFilter}
         setJobLimit={setJobLimit}
+        setFilters={setFilters}
+        filters={filters}
       />
 
       <section className='container mt-14 mb-14'>
         <div className='grid grid-cols-1 gap-x-4 lg:gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3'>
           {jobsData
             ?.filter(({ position }) =>
-              position.toLowerCase().includes(positionFilter.toLowerCase())
+              position.toLowerCase().includes(filters.position.toLowerCase())
+            )
+            .filter(
+              ({ contract }) =>
+                contract === (filters.isFulltime ? 'Full Time' : contract)
+            )
+            .filter(({ location }) =>
+              location.toLowerCase().includes(filters.location.toLowerCase())
             )
             .map(
               ({

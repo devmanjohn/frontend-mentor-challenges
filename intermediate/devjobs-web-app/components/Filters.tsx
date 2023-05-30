@@ -4,17 +4,30 @@ import { useState } from 'react';
 import FilterModel from './utils/FilterModel';
 
 type FilterProps = {
-  positionFilter: string;
-  setPositionFilter: (positionFilter: string) => void;
   setJobLimit: (jobLimit: number) => void;
+  setFilters: (filters: {
+    position: string;
+    isFulltime: boolean;
+    location: string;
+  }) => void;
+  filters: {
+    position: string;
+    isFulltime: boolean;
+    location: string;
+  };
 };
 
-function Filters({
-  positionFilter,
-  setPositionFilter,
-  setJobLimit,
-}: FilterProps) {
+function Filters({ setJobLimit, setFilters, filters }: FilterProps) {
   const [inputValue, setInputValue] = useState('');
+  const [isFilterModelOpen, setIsFilterModelOpen] = useState(false);
+
+  const handleSearch = () => {
+    setJobLimit(20);
+    setFilters({
+      ...filters,
+      position: inputValue,
+    });
+  };
 
   return (
     <section className='container p-4 rounded bg-white dark:bg-[#19202D] -mt-8'>
@@ -30,7 +43,13 @@ function Filters({
         />
 
         {/* Filter */}
-        <button type='button' className='ml-auto'>
+        <button
+          type='button'
+          className='ml-auto'
+          onClick={() => {
+            setIsFilterModelOpen((prev) => !prev);
+          }}
+        >
           <svg
             className='text-[#6E8098] dark:text-white'
             width='20'
@@ -46,16 +65,19 @@ function Filters({
         </button>
 
         {/* Filter Model */}
-        <FilterModel />
+        {isFilterModelOpen && (
+          <FilterModel
+            setIsOpen={setIsFilterModelOpen}
+            filters={filters}
+            setFilters={setFilters}
+          />
+        )}
 
         {/* Search */}
         <button
           type='button'
           className='bg-[#5964E0] p-3 rounded'
-          onClick={() => {
-            setJobLimit(20);
-            setPositionFilter(inputValue);
-          }}
+          onClick={handleSearch}
         >
           <svg
             className='text-white'
