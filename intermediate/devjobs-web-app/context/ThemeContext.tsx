@@ -15,8 +15,10 @@ export const ThemeContextProvider = ({
   children: React.ReactNode;
 }) => {
   const [theme, setTheme] = useState(() => {
-    const storedTheme = localStorage.getItem('theme');
-    return storedTheme ?? 'light';
+    if (typeof localStorage !== 'undefined') {
+      const storedTheme = localStorage.getItem('theme');
+      return storedTheme ?? 'light';
+    }
   });
 
   useEffect(() => {
@@ -28,7 +30,7 @@ export const ThemeContextProvider = ({
 
     console.log(localStorage.getItem('theme'));
     console.log(theme);
-  }, []);
+  }, [theme]);
 
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
