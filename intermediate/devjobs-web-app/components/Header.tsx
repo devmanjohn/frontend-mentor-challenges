@@ -20,7 +20,7 @@ function Header() {
   }, [theme]);
 
   return (
-    <header className='header-bg h-[136px] pt-8'>
+    <header className='header-bg h-[136px] pt-8 md:rounded-bl-[100px]'>
       <div className='container flex items-center'>
         <Link href='/' className='mr-auto'>
           <Image
