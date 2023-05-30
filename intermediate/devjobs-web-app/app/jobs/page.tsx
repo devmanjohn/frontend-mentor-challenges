@@ -11,11 +11,13 @@ import {
   limit,
   query,
 } from 'firebase/firestore';
+import Filters from '@/components/Filters';
 
 export default function Home() {
   const [jobsData, setJobsData] = useState<Job[]>();
   const [jobLimit, setJobLimit] = useState(12);
   const [totalDocs, setTotalDocs] = useState(0);
+  const [positionFilter, setPositionFilter] = useState('');
 
   // Query collection data for filters
   const q = query(collection(db, 'jobs'), limit(jobLimit));
@@ -38,34 +40,44 @@ export default function Home() {
 
   return (
     <main>
+      <Filters
+        positionFilter={positionFilter}
+        setPositionFilter={setPositionFilter}
+        setJobLimit={setJobLimit}
+      />
+
       <section className='container mt-14 mb-14'>
         <div className='grid grid-cols-1 gap-x-4 lg:gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3'>
-          {jobsData?.map(
-            ({
-              id,
-              company,
-              location,
-              logo,
-              logoBackground,
-              postedAt,
-              contract,
-              position,
-            }) => {
-              return (
-                <JobCard
-                  key={id}
-                  id={id}
-                  company={company}
-                  logo={logo}
-                  logoBackground={logoBackground}
-                  location={location}
-                  postedAt={postedAt}
-                  contract={contract}
-                  position={position}
-                />
-              );
-            }
-          )}
+          {jobsData
+            ?.filter(({ position }) =>
+              position.toLowerCase().includes(positionFilter.toLowerCase())
+            )
+            .map(
+              ({
+                id,
+                company,
+                location,
+                logo,
+                logoBackground,
+                postedAt,
+                contract,
+                position,
+              }) => {
+                return (
+                  <JobCard
+                    key={id}
+                    id={id}
+                    company={company}
+                    logo={logo}
+                    logoBackground={logoBackground}
+                    location={location}
+                    postedAt={postedAt}
+                    contract={contract}
+                    position={position}
+                  />
+                );
+              }
+            )}
         </div>
         <button
           className='bg-[#5964E0] text-white rounded px-8 py-4 font-bold mt-12 mx-auto block disabled:opacity-10 hover:opacity-80 transition-opacity'
