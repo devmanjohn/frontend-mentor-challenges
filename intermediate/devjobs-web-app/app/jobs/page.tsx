@@ -21,6 +21,7 @@ export default function Home() {
     position: '',
     isFulltime: false,
     location: '',
+    searchQuery: '',
   });
 
   // Query collection data for filters
@@ -44,17 +45,19 @@ export default function Home() {
 
   return (
     <main>
-      <Filters
-        setJobLimit={setJobLimit}
-        setFilters={setFilters}
-        filters={filters}
-      />
+      <Filters setFilters={setFilters} filters={filters} />
 
-      <section className='container mt-14 mb-14'>
+      <section className='container mt-14 mb-14 lg:mt-20 lg:mb-20'>
         <div className='grid grid-cols-1 gap-x-4 lg:gap-x-6 gap-y-14 md:grid-cols-2 lg:grid-cols-3'>
           {jobsData
-            ?.filter(({ position }) =>
-              position.toLowerCase().includes(filters.position.toLowerCase())
+            ?.filter(
+              ({ position, company }) =>
+                position
+                  .toLowerCase()
+                  .includes(filters.searchQuery.toLowerCase()) ||
+                company
+                  .toLowerCase()
+                  .includes(filters.searchQuery.toLowerCase())
             )
             .filter(
               ({ contract }) =>

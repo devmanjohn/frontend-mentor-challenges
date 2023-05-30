@@ -6,11 +6,13 @@ type FilterModelProps = {
     position: string;
     isFulltime: boolean;
     location: string;
+    searchQuery: string;
   }) => void;
   filters: {
     position: string;
     isFulltime: boolean;
     location: string;
+    searchQuery: string;
   };
 };
 
@@ -48,7 +50,7 @@ function FilterModel({ setIsOpen, filters, setFilters }: FilterModelProps) {
             />
           </svg>
           <input
-            className='w-full focus-within:outline-none bg-[#19202D]'
+            className='w-full focus-within:outline-none dark:bg-[#19202D]'
             type='text'
             name='location'
             id='location'
