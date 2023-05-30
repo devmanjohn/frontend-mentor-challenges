@@ -22,7 +22,7 @@ function Header() {
       localStorage.setItem('theme', 'dark');
     }
 
-    tag?.classList.add(theme);
+    tag?.classList.add(theme as string);
   }, [theme]);
 
   return (

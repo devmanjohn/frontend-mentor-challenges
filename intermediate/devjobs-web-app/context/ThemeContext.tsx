@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 
 type ThemeContextProps = {
-  theme: string;
+  theme: string | undefined;
   setTheme: (theme: string) => void;
 };
 
