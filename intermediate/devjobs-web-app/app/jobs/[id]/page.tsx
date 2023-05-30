@@ -136,7 +136,7 @@ function JobDetails({ params }: JobTypes) {
             </div>
           </section>
 
-          <section className='bg-white dark:bg-[#19202D] mt-14 py-6 md:p-6'>
+          <section className='bg-white dark:bg-[#19202D] mt-14 py-6 md:p-6 sticky bottom-0'>
             <div className='container max-w-[730px] md:flex'>
               <div className='hidden md:block'>
                 <h4 className='font-bold text-[#19202D] text-xl dark:text-white'>
