@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import FilterModel from './utils/FilterModel';
 
 type FilterProps = {
   positionFilter: string;
@@ -43,6 +44,9 @@ function Filters({
             />
           </svg>
         </button>
+
+        {/* Filter Model */}
+        <FilterModel />
 
         {/* Search */}
         <button

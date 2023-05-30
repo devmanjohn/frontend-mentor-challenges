@@ -37,4 +37,16 @@
   input:checked + .custom-toggle .custom-tack {
     transform: translate(calc(200% - 4px), -50%);
   }
+
+  .custom-checkbox input:checked + span svg {
+    @apply inline-block text-white;
+  }
+
+  .custom-checkbox:hover input + span {
+    @apply bg-[#d5d8f7];
+  }
+
+  .custom-checkbox input:checked + span {
+    @apply bg-[#5964E0];
+  }
 }
